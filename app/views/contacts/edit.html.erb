@@ -1,3 +1,9 @@
 <div class="title">Editing contact</div>
 
-<%= render 'form' %>
+<%= 
+	if @contact 
+		render 'form'
+	else
+		render 'record_not_found'
+	end
+%>

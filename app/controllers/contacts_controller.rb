@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.xml
   def index
-    @contacts = Contact.all
+    @contacts = Contact.my_contacts current_user
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.xml
   def show
-    @contact = Contact.find(params[:id])
+    @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -35,7 +35,7 @@ class ContactsController < ApplicationController
 
   # GET /contacts/1/edit
   def edit
-    @contact = Contact.find(params[:id])
+    @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
   end
 
   # POST /contacts
@@ -57,7 +57,7 @@ class ContactsController < ApplicationController
   # PUT /contacts/1
   # PUT /contacts/1.xml
   def update
-    @contact = Contact.find(params[:id])
+    @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
 
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
@@ -73,7 +73,7 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1
   # DELETE /contacts/1.xml
   def destroy
-    @contact = Contact.find(params[:id])
+    @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
     @contact.destroy
 
     respond_to do |format|

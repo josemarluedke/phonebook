@@ -1,4 +1,10 @@
 class Contact < ActiveRecord::Base
   belongs_to :group
-  validates_presence_of :name, :phone, :group_id
+  belongs_to :user
+  validates_presence_of :name, :phone, :group_id, :user_id
+
+
+  def self.my_contacts(current_user)
+    where("user_id = #{current_user.id}").all
+  end
 end
