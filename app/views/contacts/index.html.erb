@@ -16,9 +16,9 @@
 	<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
 		<div class="content">
 			<div class="left w300px"><%= link_to_unless_current contact.name, contact %></div>
-			<div class="left w250px"><%= contact.email == "" ? raw("&nbsp;") : contact.email %></div>
+			<div class="left w250px"><%= contact.email == "" ? nbsp : contact.email %></div>
 			<div class="left w100px"><%= contact.phone %></div>
-			<div class="left w100px"><%= contact.cell == "" ? raw("&nbsp;") : contact.cell %></div>
+			<div class="left w100px"><%= contact.cell == "" ? nbsp : contact.cell %></div>
 			<div class="left w100px"><%= contact.group.name %></div>
 			
 		</div>
