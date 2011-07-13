@@ -3,10 +3,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>Agenda</title>
-	<% #stylesheet_link_tag "app" %>
-	<% # javascript_include_tag "app" %>
-	<% # javascript_include_tag :all %>
-
 	<%= stylesheet_link_tag :all %>
 	<%= javascript_include_tag :defaults %>
 	<%= csrf_meta_tag %>
@@ -19,7 +15,9 @@
 		<br />
 		<%= link_to "Home", '/' %> -
 		<%= link_to "Contacts", '/contacts' %> -
-		<%= link_to "Groups", '/groups' %>
+		<%= link_to "Groups", '/groups' %> - 
+		<%= link_to("Logout", destroy_user_session_path, :method => :delete) if user_signed_in? %>
+		<%= link_to("Login", new_user_session_path) unless user_signed_in? %>
 	</div>
 </header>
 	<section class="content">
