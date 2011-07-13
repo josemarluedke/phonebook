@@ -8,18 +8,45 @@
 	<%= csrf_meta_tag %>
 </head>
 <body>
-<header id="menu">
-	<div style="border: 1px solid #444444; padding: 5px; text-align: center;">
-		<h2>Agenda do Josemar Davi Luedke</h2>
-		<h5>Desenvolvido com Ruby on Rails</h5>
-		<br />
-		<%= link_to "Home", '/' %> -
-		<%= link_to "Contacts", '/contacts' %> -
-		<%= link_to "Groups", '/groups' %> - 
-		<%= link_to("Logout", destroy_user_session_path, :method => :delete) if user_signed_in? %>
-		<%= link_to("Login", new_user_session_path) unless user_signed_in? %>
-	</div>
-</header>
+
+
+	<div id="logo"><h1>Agenda of contacts</h1></div>
+		
+	<header id="menu">
+		<div class="left" style="width:500px">
+			<ul>
+				<li>
+					<%= link_to "Home", '/' %>
+				</li>
+				<li>
+					<%= link_to "My Contacts", '/contacts' %>
+				</li>
+				<li>
+					<%= link_to "Groups", '/groups' %>
+				</li>
+			</ul>
+		</div>
+		<div class="right" style="width:350px;">
+			<ul class="right">
+				<% if user_signed_in? %>
+					<li><a style="cursor:default;"><%= current_user.email %></a>
+						<ul class="first">
+							<li>
+							<%= link_to "Profile settings", edit_user_registration_path(current_user) %>
+							</li>
+						</ul>
+					</li>
+				<% end %>
+				<li style="margin-right:0px;">
+					<%= link_to("Logout", destroy_user_session_path, :method => :delete) if user_signed_in? %>
+					<%= link_to("Login", new_user_session_path) unless user_signed_in? %>
+				</li>
+				
+			</ul>
+		</div>
+	</header>
+	<div class="clear"></div>
+
 	<section class="content">
 		<p style="color: green"><%= flash[:notice] %></p>
 		<div id="content">

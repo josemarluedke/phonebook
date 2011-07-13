@@ -1,4 +1,4 @@
-body 			{color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0F0; margin:auto; padding:0px; width: 1000px;}
+body 			{color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0F0 url(../images/bg.png) top repeat-x; margin:auto; padding:0px; width: 1000px;}
 
 section,
 header,
@@ -95,3 +95,33 @@ div.list div.item div.buttons {float:right; width: 50px; text-align: right;}
 div.list div.header	{background: #666666; color: #FFFFFF; padding: 5px; font-weight: bold;}
 div.list div.total	{font-weight: bold; margin-top: 15px; text-align: right; font-size: 12px;}
 div.list div.total span.num	{color: #003377;}
+
+
+
+/* Logo */
+div#logo		{float: left; background: transparent url(../images/logo.gif) no-repeat; width: 115px; height: 65px;}
+div#logo h1		{visibility: hidden;}
+
+
+/* Menu Principal */
+header#menu 						{float:right; margin-top:0px; width:860px;	background:#627AAD;	font-size:11px;	color:#ffffff; min-height:28px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px;}
+header#menu ul 						{position:relative;	margin:0; padding:3px 5px 0 5px; list-style-type:none; z-index:100;}
+header#menu ul li 					{display:block;	position:relative; float:left; margin-right:5px;}
+header#menu ul li a 				{display:block; padding:3px 1px 5px 6px; margin-right:5px; color:#FFFFFF; font-weight:bold; cursor:pointer;}
+header#menu ul li:hover 			{background:#8397BF;}
+header#menu a:hover					{text-decoration:none;}
+header#menu ul li ul 				{color:#333333;	position:absolute; visibility:hidden; float:none; top:20px; left:-1px; width:170px;	margin:0; background-color:#FDFDFD; z-index:10000; border:1px solid #8397BF; border-bottom:2px solid #8397BF; padding:5px 0 5px 0;}
+header#menu ul li:hover ul.first  	{visibility:visible;}
+header#menu ul li ul li 			{display:block;	float:none;	list-style:none; margin:0; padding:0 0 0 5px; color:#333333; height:22px;}
+header#menu ul li ul li a			{color:#333333; font-weight:normal;}
+header#menu ul li ul li:hover a   	{color:#FFFFFF; }
+header#menu ul li ul li ul 			{color:#333333;	position:absolute; visibility:hidden; float:none; top:0; left:170px; width:170px; margin:0;	background-color:#FDFDFD; z-index:10000; border:1px solid #8397BF; border-bottom:2px solid #8397BF; padding:5px 0 5px 0;}
+header#menu ul li ul li:hover ul.second {visibility:visible;}
+header#menu ul li ul li ul.second li a {color:#333333;}
+header#menu ul li ul li ul.second li:hover a {color:#FFFFFF;}
+header#menu li.line 				{background:#FDFDFD; border-top:1px solid #8397BF; height:0px; padding:0; margin:3px;}
+header#menu li.subMenuRight 		{background:url(../Images/bg/sub-menu-right.gif) 160px  no-repeat;}
+header#menu li.subMenuRight:hover 	{background:#8397BF url(../Images/Bg/sub-menu-right.gif) 160px  no-repeat;}
+header#menu .subMenuDow 			{background:url(../Images/Bg/sub-menu-dow.gif) right no-repeat; width:17px; height:20px}
+
+
