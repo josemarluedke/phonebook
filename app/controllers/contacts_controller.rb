@@ -16,6 +16,9 @@ class ContactsController < ApplicationController
   def show
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
 
+    #Retorna 404 caso não encontre o contato
+    return render_404 unless @contact
+
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @contact }
@@ -36,12 +39,14 @@ class ContactsController < ApplicationController
   # GET /contacts/1/edit
   def edit
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
+    return render_404 unless @contact
   end
 
   # POST /contacts
   # POST /contacts.xml
   def create
     @contact = Contact.new(params[:contact])
+    return render_404 unless @contact
 
     respond_to do |format|
       if @contact.save
@@ -58,6 +63,7 @@ class ContactsController < ApplicationController
   # PUT /contacts/1.xml
   def update
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
+    return render_404 unless @contact
 
     respond_to do |format|
       if @contact.update_attributes(params[:contact])
@@ -74,6 +80,8 @@ class ContactsController < ApplicationController
   # DELETE /contacts/1.xml
   def destroy
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
+    return render_404 unless @contact
+    
     @contact.destroy
 
     respond_to do |format|
