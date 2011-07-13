@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Agenda</title>
+	<% #stylesheet_link_tag "app" %>
+	<% # javascript_include_tag "app" %>
+	<% # javascript_include_tag :all %>
+
+	<%= stylesheet_link_tag :all %>
+	<%= javascript_include_tag :defaults %>
+	<%= csrf_meta_tag %>
+</head>
+<body>
+<header id="menu">
+	<div style="border: 1px solid #444444; padding: 5px; text-align: center;">
+		<h2>Agenda do Josemar Davi Luedke</h2>
+		<h5>Desenvolvido com Ruby on Rails</h5>
+		<br />
+		<%= link_to "Home", '/' %> -
+		<%= link_to "Contacts", '/contacts' %> -
+		<%= link_to "Groups", '/groups' %>
+	</div>
+</header>
+	<section class="content">
+		<p style="color: green"><%= flash[:notice] %></p>
+		<div id="content">
+			<%= yield %>
+		</div>
+	</section>
+	<footer>
+		<p style="padding-top: 5px; text-align: center; color: #333">
+			<%= Time.now.year %> Copyright &copy; Agenda com Ruby on Rails
+			<br />
+			Powered by <%= link_to "Josemar Davi Luedke", "http://josemarluedke.com" %>
+		</p>
+	</footer>
+</body>
+</html>

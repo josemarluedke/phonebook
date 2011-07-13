@@ -1,0 +1,33 @@
+<div class="title left w300px">Contacts</div>
+<div class="right w150px" style="margin-top: 30px; text-align: right;"><%= link_to "New Contact", new_contact_path%></div>
+<div class="clear"></div>
+
+<div class="list">
+	<div class="header">
+		<div class="left w300px">Name</div>
+		<div class="left w250px">E-mail:</div>
+		<div class="left w100px">Phone</div>
+		<div class="left w100px">Cell Phone</div>
+		<div class="left w100px">Group</div>
+		<div class="clear"></div>
+	</div>
+
+<% @contacts.each do |contact| %>
+	<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
+		<div class="content">
+			<div class="left w300px"><%= link_to_unless_current contact.name, contact %></div>
+			<div class="left w250px"><%= contact.email == "" ? raw("&nbsp;") : contact.email %></div>
+			<div class="left w100px"><%= contact.phone %></div>
+			<div class="left w100px"><%= contact.cell == "" ? raw("&nbsp;") : contact.cell %></div>
+			<div class="left w100px"><%= contact.group.name %></div>
+			
+		</div>
+		<div class="buttons">
+			<%= link_to image_tag("icons/edit.png"), edit_contact_path(contact), :title => "Edit" %>
+			&nbsp;
+			<%= link_to image_tag("icons/delete.png"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete" %>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<% end %>
+</div>
