@@ -29,17 +29,31 @@
 		<div class="right" style="width:350px;">
 			<ul class="right">
 				<% if user_signed_in? %>
-					<li><a style="cursor:default;"><%= current_user.email %></a>
+					<li><a style="cursor:default;"><%= current_user.name %></a>
 						<ul class="first">
+							<li class="userDetails">
+								<b><%= current_user.name %></b>
+								<br />
+								<%= current_user.email %>
+								<br /><br />
+								<b>Last sign in at</b> 
+								<br />
+								<%= current_user.last_sign_in_at %>
+							</li>
 							<li>
-							<%= link_to "Profile settings", edit_user_registration_path(current_user) %>
+								<%= link_to "Profile settings", edit_user_registration_path(current_user) %>
 							</li>
 						</ul>
 					</li>
+				<% else %>
+					<li style="margin-right:0px;">
+						<%= link_to("Sign In", new_user_session_path) %>
+					</li>
 				<% end %>
+
 				<li style="margin-right:0px;">
-					<%= link_to("Logout", destroy_user_session_path, :method => :delete) if user_signed_in? %>
-					<%= link_to("Login", new_user_session_path) unless user_signed_in? %>
+					<%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %>
+					<%= link_to("Sign up", new_user_registration_path) unless user_signed_in? %>
 				</li>
 				
 			</ul>

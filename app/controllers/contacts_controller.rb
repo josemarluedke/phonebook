@@ -81,7 +81,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
     return render_404 unless @contact
-    
+
     @contact.destroy
 
     respond_to do |format|

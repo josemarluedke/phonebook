@@ -124,4 +124,5 @@ header#menu li.subMenuRight 		{background:url(../Images/bg/sub-menu-right.gif) 1
 header#menu li.subMenuRight:hover 	{background:#8397BF url(../Images/Bg/sub-menu-right.gif) 160px  no-repeat;}
 header#menu .subMenuDow 			{background:url(../Images/Bg/sub-menu-dow.gif) right no-repeat; width:17px; height:20px}
 
-
+header#menu li.userDetails 			{height: auto; padding-left: 10px; margin-bottom: 15px;}
+header#menu li.userDetails:hover 	{background: none;}
