@@ -11,7 +11,7 @@ gem 'sqlite3'
 # Additional Gems
 
 gem 'devise'
-
+gem 'jquery-rails'
 
 
 
