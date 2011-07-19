@@ -10,4 +10,5 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :password, :password_confirmation, :remember_me
 
   has_many :contacts, :dependent => :destroy
+  has_many :groups, :dependent => :destroy
 end

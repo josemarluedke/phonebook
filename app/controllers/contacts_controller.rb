@@ -1,7 +1,6 @@
 class ContactsController < ApplicationController
   before_filter :authenticate_user!
-  # GET /contacts
-  # GET /contacts.xml
+
   def index
     @contacts = Contact.my_contacts current_user
 
@@ -11,8 +10,6 @@ class ContactsController < ApplicationController
     end
   end
 
-  # GET /contacts/1
-  # GET /contacts/1.xml
   def show
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
 
@@ -25,8 +22,6 @@ class ContactsController < ApplicationController
     end
   end
 
-  # GET /contacts/new
-  # GET /contacts/new.xml
   def new
     @contact = Contact.new
 
@@ -36,14 +31,11 @@ class ContactsController < ApplicationController
     end
   end
 
-  # GET /contacts/1/edit
   def edit
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
     return render_404 unless @contact
   end
 
-  # POST /contacts
-  # POST /contacts.xml
   def create
     @contact = Contact.new(params[:contact])
     return render_404 unless @contact
@@ -59,8 +51,6 @@ class ContactsController < ApplicationController
     end
   end
 
-  # PUT /contacts/1
-  # PUT /contacts/1.xml
   def update
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
     return render_404 unless @contact
@@ -76,8 +66,6 @@ class ContactsController < ApplicationController
     end
   end
 
-  # DELETE /contacts/1
-  # DELETE /contacts/1.xml
   def destroy
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
     return render_404 unless @contact

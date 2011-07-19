@@ -43,7 +43,7 @@
    <div class="w360px left">
       <div class="field">
         <%= f.label :group_id %><br />
-        <%= f.collection_select :group_id, Group.all(:order => "name"), :id, :name, {}, {:class => "w360px"}%>
+        <%= f.collection_select :group_id, Group.my_groups(current_user), :id, :name, {}, {:class => "w360px"}%>
       </div>
   </div>
   <div class="clear"></div>
