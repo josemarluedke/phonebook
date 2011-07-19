@@ -5,6 +5,6 @@ class Contact < ActiveRecord::Base
 
 
   def self.my_contacts(current_user)
-    where("user_id = #{current_user.id}").all
+    where("user_id = #{current_user.id}").all :order => "name"
   end
 end

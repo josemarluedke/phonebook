@@ -41,7 +41,7 @@
   </div>
   <div class="field">
     <%= f.label :group_id %><br />
-    <%= f.collection_select :group_id, Group.all, :id, :name%>
+    <%= f.collection_select :group_id, Group.all(:order => "name"), :id, :name%>
   </div>
   <div class="actions">
     <%= submit_tag "Cancel", :type => 'button', :onclick => "location.href='#{contacts_path}'" %>
