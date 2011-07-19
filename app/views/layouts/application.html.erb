@@ -56,12 +56,20 @@
 			</ul>
 		</div>
 	</header>
+
+	<% if notice %>
+		<div class="boxNotice">
+			<div id="notice"><%= notice %></div>
+			<script type="text/javascript">
+				$(document).ready(function(){
+					setTimeout("$('#notice').slideUp('fast')", 5000);
+				});
+			</script>
+		</div>
+	<% end %>
 	<div class="clear"></div>
 
 	<section class="content">
-		<% if notice %>
-			<p id="notice"><%= notice %></p>
-		<% end %>
 		<div id="content">
 			<%= yield %>
 		</div>

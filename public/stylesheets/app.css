@@ -88,8 +88,10 @@ input.inputCheckbox {width: 13px; height: 13px}
 
 /* Outhers */
 .title			{font-size:25px; color:#1E769C; text-shadow: 0 1px 2px #999; font-family:'DroidSansRegular',"Trebuchet MS",Trebuchet,Verdana,sans-serif; margin-bottom:20px}
-.messages, #notice	{line-height: 19px; font-size: 13px; text-align:center; background: #FFFFCC; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; padding: 5px; margin: 7px; width: 550px; margin: auto; border: 1px solid #F9DD34;}
+.messages, #notice	{line-height: 19px; font-size: 13px; text-align:center; margin:auto; background: #FFFFCC; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; padding: 2px; width: 450px; border: 1px solid #F9DD34;}
 .obsRequired, .obs{font-style: italic; text-align: right; margin: 10px; margin-right: 5px;}
+
+.boxNotice {margin-top: 10px; width: 860px; float: right;}
 
 
 div.list		{}
