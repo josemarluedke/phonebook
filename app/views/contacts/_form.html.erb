@@ -22,27 +22,36 @@
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
-  <div class="field">
-    <%= f.label :phone %><br />
-    <%= f.text_field :phone %>
+  <div class="w200px left mr5px">
+      <div class="field">
+        <%= f.label :phone %><br />
+        <%= f.text_field :phone, {:class => "w200px"}  %>
+      </div>
   </div>
-  <div class="field">
-    <%= f.label :cell %><br />
-    <%= f.text_field :cell %>
+  <div class="w200px left mr5px">
+      <div class="field">
+        <%= f.label :cell, "Cell Phone" %><br />
+        <%= f.text_field :cell, {:class => "w200px"}  %>
+      </div>
+   </div>
+   <div class="w200px left mr5px">
+      <div class="field">
+        <%= f.label :birthday %><br />
+        <%=  f.text_field :birthday, {:class => "w200px"} %>
+      </div>
+   </div>
+   <div class="w360px left">
+      <div class="field">
+        <%= f.label :group_id %><br />
+        <%= f.collection_select :group_id, Group.all(:order => "name"), :id, :name, {}, {:class => "w360px"}%>
+      </div>
   </div>
+  <div class="clear"></div>
   <div class="field">
     <%= f.label :obs %><br />
     <%= f.text_area :obs %>
   </div>
-  <div class="field">
-    <%= f.label :birthday %><br />
-    <%=  f.text_field :birthday %>
-    <% # f.date_select :birthday %>
-  </div>
-  <div class="field">
-    <%= f.label :group_id %><br />
-    <%= f.collection_select :group_id, Group.all(:order => "name"), :id, :name%>
-  </div>
+
   <div class="actions">
     <%= submit_tag "Cancel", :type => 'button', :onclick => "location.href='#{contacts_path}'" %>
     <%= f.submit %>

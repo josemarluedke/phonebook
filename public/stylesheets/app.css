@@ -24,6 +24,7 @@ img				{border: none;}
 .w300px			{width: 300px;}
 .w325px			{width: 325px;}
 .w350px			{width: 350px;}
+.w360px			{width: 360px;}
 .w400px			{width: 400px;}
 .w450px			{width: 450px;}
 .w500px			{width: 500px;}
@@ -70,6 +71,8 @@ input.button,
 input[type=radio] {width:auto;}
 input[type=checkbox] {width:auto;}
 .field_with_errors input {border: 1px solid red;}
+
+select 			{height: 24px}
 
 div.label		{font-weight:bold; font-size: 13px;}
 div.input		{margin-bottom:10px;}
