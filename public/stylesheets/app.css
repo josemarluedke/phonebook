@@ -127,3 +127,56 @@ header#menu .subMenuDow 			{background:url(../Images/Bg/sub-menu-dow.gif) right 
 
 header#menu li.userDetails 			{height: auto; padding-left: 10px; margin-bottom: 15px;}
 header#menu li.userDetails:hover 	{background: none;}
+
+
+
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+
+.field_with_errors {
+  padding: 1px;
+  background-color: red;
+  display: table;
+}
+
+.field_with_errors label {
+  color: #FFFFFF;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius:6px 6px 6px 6px;
+  -webkit-border-radius:6px 6px 6px 6px;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
