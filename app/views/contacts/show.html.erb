@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <b>Name:</b>
   <%= @contact.name %>
@@ -37,7 +35,7 @@
 
 <p>
   <b>Group:</b>
-  <%= @contact.group.name %>
+  <%= (@contact.group) ? @contact.group.name : nbsp %>
 </p>
 
 

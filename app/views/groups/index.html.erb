@@ -1,23 +1,24 @@
-<h1>Listing groups</h1>
+<div class="title left w300px"><%= @page_title = "Groups" %></div>
+<div class="right w150px" style="margin-top: 30px; text-align: right;"><%= link_to "New Group", new_group_path%></div>
+<div class="clear"></div>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div class="list">
+  <div class="header">
+    <div class="left w300px">Name</div>
+    <div class="clear"></div>
+  </div>
 
 <% @groups.each do |group| %>
-  <tr>
-    <td><%= group.name %></td>
-    <td><%= link_to 'Show', group %></td>
-    <td><%= link_to 'Edit', edit_group_path(group) %></td>
-    <td><%= link_to 'Destroy', group, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Group', new_group_path %>
+  <div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
+    <div class="content">
+      <div class="left w300px"><%= group.name %></div>
+    </div>
+    <div class="buttons">
+      <%= link_to image_tag("icons/edit.png"), edit_group_path(group), :title => "Edit" %>
+      &nbsp;
+      <%= link_to image_tag("icons/delete.png"), group, :confirm => 'Are you sure?', :method => :delete, :title => "Delete" %>
+    </div>
+    <div class="clear"></div>
+  </div>
+  <% end %>
+</div>

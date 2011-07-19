@@ -16,6 +16,7 @@
     <%= f.text_field :name %>
   </div>
   <div class="actions">
+    <%= submit_tag "Cancel", :type => 'button', :onclick => "location.href='#{groups_path}'" %>
     <%= f.submit %>
   </div>
 <% end %>

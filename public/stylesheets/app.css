@@ -85,8 +85,9 @@ input.inputCheckbox {width: 13px; height: 13px}
 
 /* Outhers */
 .title			{font-size:25px; color:#1E769C; text-shadow: 0 1px 2px #999; font-family:'DroidSansRegular',"Trebuchet MS",Trebuchet,Verdana,sans-serif; margin-bottom:20px}
-.messages		{line-height: 19px; font-size: 13px; text-align:center; background: #FFFFCC; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; padding: 5px; margin: 7px; width: 550px; margin: auto; border: 1px solid #F9DD34;}
+.messages, #notice	{line-height: 19px; font-size: 13px; text-align:center; background: #FFFFCC; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; padding: 5px; margin: 7px; width: 550px; margin: auto; border: 1px solid #F9DD34;}
 .obsRequired, .obs{font-style: italic; text-align: right; margin: 10px; margin-right: 5px;}
+
 
 div.list		{}
 div.list div.item {background: #F9F9F9; border-bottom: solid 1px #CCCCCC; padding: 5px; padding-bottom: 2px;}
@@ -113,7 +114,7 @@ header#menu a:hover					{text-decoration:none;}
 header#menu ul li ul 				{color:#333333;	position:absolute; visibility:hidden; float:none; top:20px; left:-1px; width:170px;	margin:0; background-color:#FDFDFD; z-index:10000; border:1px solid #8397BF; border-bottom:2px solid #8397BF; padding:5px 0 5px 0;}
 header#menu ul li:hover ul.first  	{visibility:visible;}
 header#menu ul li ul li 			{display:block;	float:none;	list-style:none; margin:0; padding:0 0 0 5px; color:#333333; height:22px;}
-header#menu ul li ul li a			{color:#333333; font-weight:normal;}
+header#menu ul li ul li a			{color:#627AAD; font-weight:bold;}
 header#menu ul li ul li:hover a   	{color:#FFFFFF; }
 header#menu ul li ul li ul 			{color:#333333;	position:absolute; visibility:hidden; float:none; top:0; left:170px; width:170px; margin:0;	background-color:#FDFDFD; z-index:10000; border:1px solid #8397BF; border-bottom:2px solid #8397BF; padding:5px 0 5px 0;}
 header#menu ul li ul li:hover ul.second {visibility:visible;}

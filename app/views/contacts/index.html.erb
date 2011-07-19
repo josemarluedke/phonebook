@@ -1,4 +1,4 @@
-<div class="title left w300px">Contacts</div>
+<div class="title left w300px"><%= @page_title = "My Contacts" %></div>
 <div class="right w150px" style="margin-top: 30px; text-align: right;"><%= link_to "New Contact", new_contact_path%></div>
 <div class="clear"></div>
 
@@ -19,8 +19,7 @@
 			<div class="left w250px"><%= contact.email == "" ? nbsp : contact.email %></div>
 			<div class="left w100px"><%= contact.phone %></div>
 			<div class="left w100px"><%= contact.cell == "" ? nbsp : contact.cell %></div>
-			<div class="left w100px"><%= contact.group.name %></div>
-			
+			<div class="left w100px"><%= (contact.group) ? contact.group.name : nbsp %></div>
 		</div>
 		<div class="buttons">
 			<%= link_to image_tag("icons/edit.png"), edit_contact_path(contact), :title => "Edit" %>
