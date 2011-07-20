@@ -126,9 +126,9 @@ header#menu ul li ul li:hover ul.second {visibility:visible;}
 header#menu ul li ul li ul.second li a {color:#333333;}
 header#menu ul li ul li ul.second li:hover a {color:#FFFFFF;}
 header#menu li.line 				{background:#FDFDFD; border-top:1px solid #8397BF; height:0px; padding:0; margin:3px;}
-header#menu li.subMenuRight 		{background:url(../Images/bg/sub-menu-right.gif) 160px  no-repeat;}
+header#menu li.subMenuRight 		{background:url(../images/bg/sub-menu-right.gif) 160px  no-repeat;}
 header#menu li.subMenuRight:hover 	{background:#8397BF url(../Images/Bg/sub-menu-right.gif) 160px  no-repeat;}
-header#menu .subMenuDow 			{background:url(../Images/Bg/sub-menu-dow.gif) right no-repeat; width:17px; height:20px}
+header#menu .subMenuDow 			{background:url(../Iiages/Bg/sub-menu-dow.gif) right no-repeat; width:17px; height:20px}
 
 header#menu li.userDetails 			{height: auto; padding-left: 10px; margin-bottom: 15px;}
 header#menu li.userDetails:hover 	{background: none;}
@@ -185,3 +185,28 @@ div.field, div.actions {
   list-style: square;
 }
 
+
+
+
+
+#contacts   {}
+#contacts #list {width: 525px; background: #DDD; float: left; border-right: 1px solid #CCC; }
+#contacts #details  {width: 450px; background: #DDD; float: left;}
+
+
+#contacts #list .item {min-height: 50px; padding: 10px; padding-bottom: 5px;}
+
+#contacts #list .item .photo {float: left; width: 48px; min-height: 48px; margin-right: 5px;}
+#contacts #list .item .content {width: 425px; padding: 0px;}
+
+#contacts #list .item .content .name {font-weight: bold; font-size: 15px;}
+#contacts #list .item .content .group{color: #999;}
+
+#contacts #list .item .content .details {padding-top: 5px; }
+
+#contacts #list .item .content .actions {padding-top: 2px; margin: 0;}
+#contacts #list .item .content .actions a.favorite span i {background: url(../images/icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+
+#contacts #list .item .content .actions a.favorite:hover span i {background-position: -16px 0; }
+
+#contacts #list .item .content .actions a.favorite.favorited span i {background-position: -32px 0; }

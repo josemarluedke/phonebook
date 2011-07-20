@@ -2,6 +2,50 @@
 <div class="right w150px" style="margin-top: 30px; text-align: right;"><%= link_to "New Contact", new_contact_path%></div>
 <div class="clear"></div>
 
+
+
+
+
+<div id="contacts">
+
+	<div id="list" class="list">
+		
+		<% @contacts.each do |contact| %>
+
+			<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
+				<div class="photo">
+					<%# http://twitter.com/users/show/josemarluedke.xml %>
+					<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg">
+				</div>
+				<div class="content">
+					<span class="name"><%= contact.name %></span>
+					<span class="group"><%= (contact.group) ? contact.group.name : nbsp %></span>
+					<div class="details">
+						Phone: <%= contact.phone %>
+						&nbsp;&nbsp;
+						E-mail: <%= (contact.email == "") ? "--" : contact.email %>
+					</div>
+					<div class="actions">
+						<a href="#" class="favorite"><span><i></i>Favorite</span></a>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div>
+		<% end %>
+
+
+	</div>
+
+	<div id="details">
+		Teste de teste
+	</div>
+</div>
+
+<div class="clear"></div>
+
+<div style="margin-top: 100px;">aa</div>
+
+
 <div class="list">
 	<div class="header">
 		<div class="left w300px">Name</div>
