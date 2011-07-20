@@ -8,7 +8,7 @@
 	<%= csrf_meta_tag %>
 </head>
 <body>
-	<div id="logo"><h1>Agenda of contacts</h1></div>	
+	<div id="logo"><%= link_to image_tag("logo.png"), "/" %><h1>Phone Book</h1></div>	
 	<header id="menu">
 		<div class="left" style="width:400px">
 			<ul>
@@ -76,7 +76,7 @@
 	</section>
 	<footer>
 		<p style="padding-top: 5px; text-align: center; color: #333">
-			<%= Time.now.year %> Copyright &copy; Agenda com Ruby on Rails
+			<%= Time.now.year %> Copyright &copy; Phone Book with Ruby on Rails
 			<br />
 			Powered by <%= link_to "Josemar Davi Luedke", "http://josemarluedke.com" %>
 		</p>

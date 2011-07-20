@@ -42,7 +42,7 @@ img				{border: none;}
 .uppercase		{text-transform:uppercase;}
 .textRight		{text-align: right;}
 .textCenter		{text-align: center;}
-div#logo		{float: left; background: transparent url(../images/logo.png) no-repeat; width: 215px; height: 63px; margin-top: 5px;}
+div#logo		{float: left; width: 215px; height: 63px; margin-top: 5px;}
 div#logo h1		{visibility: hidden;}
 span.hidden		{visibility: hidden; display: none;}
 .displayNone	{display: none;}
