@@ -42,7 +42,7 @@ img				{border: none;}
 .uppercase		{text-transform:uppercase;}
 .textRight		{text-align: right;}
 .textCenter		{text-align: center;}
-div#logo		{float: left; background: transparent url(../Images/Bg/logo.jpg) no-repeat; width: 115px; height: 65px;}
+div#logo		{float: left; background: transparent url(../images/logo.png) no-repeat; width: 215px; height: 63px; margin-top: 5px;}
 div#logo h1		{visibility: hidden;}
 span.hidden		{visibility: hidden; display: none;}
 .displayNone	{display: none;}
@@ -91,7 +91,7 @@ input.inputCheckbox {width: 13px; height: 13px}
 .messages, #notice	{line-height: 19px; font-size: 13px; text-align:center; margin:auto; background: #FFFFCC; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; padding: 2px; width: 450px; border: 1px solid #F9DD34;}
 .obsRequired, .obs{font-style: italic; text-align: right; margin: 10px; margin-right: 5px;}
 
-.boxNotice {margin-top: 10px; width: 860px; float: right;}
+.boxNotice {margin-top: 10px; width: 760px; float: right;}
 
 
 div.list		{}
@@ -103,14 +103,8 @@ div.list div.total	{font-weight: bold; margin-top: 15px; text-align: right; font
 div.list div.total span.num	{color: #003377;}
 
 
-
-/* Logo */
-div#logo		{float: left; background: transparent url(../images/logo.gif) no-repeat; width: 115px; height: 65px;}
-div#logo h1		{visibility: hidden;}
-
-
 /* Menu Principal */
-header#menu 						{float:right; margin-top:0px; width:860px;	background:#627AAD;	font-size:11px;	color:#ffffff; min-height:28px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px;}
+header#menu 						{float:right; margin-top:0px; width:760px;	background:#627AAD;	font-size:11px;	color:#ffffff; min-height:28px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px; border: 1px solid #1D4088; border-top: none;}
 header#menu ul 						{position:relative;	margin:0; padding:3px 5px 0 5px; list-style-type:none; z-index:100;}
 header#menu ul li 					{display:block;	position:relative; float:left; margin-right:5px;}
 header#menu ul li a 				{display:block; padding:3px 1px 5px 6px; margin-right:5px; color:#FFFFFF; font-weight:bold; cursor:pointer;}

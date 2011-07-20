@@ -4,14 +4,11 @@
 
 
 
-
-
 <div id="contacts">
 
 	<div id="list" class="list">
 		
 		<% @contacts.each do |contact| %>
-
 			<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
 				<div class="photo">
 					<%# http://twitter.com/users/show/josemarluedke.xml %>
@@ -32,7 +29,6 @@
 				<div class="clear"></div>
 			</div>
 		<% end %>
-
 
 	</div>
 
