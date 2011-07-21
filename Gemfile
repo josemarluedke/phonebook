@@ -13,3 +13,6 @@ gem 'sqlite3'
 
 gem 'devise'
 gem 'jquery-rails'
+
+gem "nokogiri", "~> 1.5.0"
+gem "rest-open-uri", "~> 1.0.0"

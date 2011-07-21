@@ -2,6 +2,28 @@ class ContactsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    
+
+
+
+    begin
+      xml = open("http://twitter.com/users/show/josemarluedke.xml")
+      rescue OpenURI::HTTPError => e
+        xml = false
+    end
+
+    if xml
+      twitter = Nokogiri::XML(xml)
+      @aaaa = twitter.xpath('//user/profile_image_url').text
+    else
+      @aaaa = 'error'  
+    end
+
+
+
+
+
+
     @contacts = Contact.my_contacts current_user
 
     respond_to do |format|

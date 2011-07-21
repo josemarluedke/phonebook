@@ -22,6 +22,12 @@
     <%= f.label :email %><br />
     <%= f.email_field :email %>
   </div>
+
+  <div class="field">
+        <%= f.label :twitter %><br />
+        <%= f.text_field :twitter, {:class => "w200px", :placeholder => "@TwitterName"}  %>
+      </div>
+
   <div class="w200px left mr5px">
       <div class="field">
         <%= f.label :phone %><br />
