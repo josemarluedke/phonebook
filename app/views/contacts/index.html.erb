@@ -20,7 +20,9 @@
 					<div class="details">
 						Phone: <%= contact.phone %>
 						&nbsp;&nbsp;
-						E-mail: <%= (contact.email == "") ? "--" : contact.email %>
+						E-mail: <%= (contact.email == "") ? "--" : (link_to contact.email, "mailto:#{contact.email}") %>
+						&nbsp;&nbsp;
+						<%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}" if contact.twitter%>
 					</div>
 					<div class="actions">
 						<a href="#" class="favorite"><span><i></i>Favorite</span></a>
