@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Agenda::Application.load_tasks
+Phonebook::Application.load_tasks

@@ -1,4 +1,4 @@
-Agenda::Application.routes.draw do
+Phonebook::Application.routes.draw do
   resources :contacts
 
   resources :groups
