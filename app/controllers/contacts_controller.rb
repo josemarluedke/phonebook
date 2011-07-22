@@ -14,7 +14,7 @@ class ContactsController < ApplicationController
       twitter = Nokogiri::XML(xml)
       @aaaa = twitter.xpath('/user/profile_image_url').text
     else
-      @aaaa = 'error'  
+      @aaaa = 'error'
     end
 
 

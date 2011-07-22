@@ -9,7 +9,7 @@ class Contact < ActiveRecord::Base
 	end
 
 	def before_save
-		if self.twitter[0...1] != "@" && self.twitter != ""
+		if self.twitter != "" && self.twitter[0...1] != "@"
 			self.twitter = "@#{self.twitter}";
 		end
 	end
