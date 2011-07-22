@@ -11,8 +11,7 @@ gem 'sqlite3'
 
 # Additional Gems
 
-gem 'devise'
-gem 'jquery-rails'
-
+gem "devise", "~> 1.4.2"
+gem "jquery-rails", "~> 1.0.12"
 gem "nokogiri", "~> 1.5.0"
 gem "rest-open-uri", "~> 1.0.0"

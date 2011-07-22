@@ -84,8 +84,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  devise
-  jquery-rails
+  devise (~> 1.4.2)
+  jquery-rails (~> 1.0.12)
   nokogiri (~> 1.5.0)
   rails (= 3.0.9)
   rest-open-uri (~> 1.0.0)
