@@ -23,9 +23,12 @@ var App = {
 		},
 		rollOver : function (element){
 			element.style.backgroundColor = '#E5F2FC';
+			$(element).children('.content').children('.actions').children('.showOver').show();
+			$(element).children('.content').children('.details').children('.more').show();
 		},
 		rollOut : function (element){
 			element.style.backgroundColor = '';
+			$('.showOver').hide();
 		},
 		tipsy : function(){
 			$('img, div, span, a').tipsy({gravity: 'e'});

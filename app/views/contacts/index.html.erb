@@ -1,73 +1,116 @@
 <div class="title left w300px"><%= @page_title = "My Contacts" %></div>
-<div class="right w150px" style="margin-top: 30px; text-align: right;"><%= link_to "New Contact", new_contact_path%></div>
+<div class="clear"></div>
+
+
+
+<div class="filter">
+	<div class="letters">
+		<ul>
+			<li class=""><a href="/letra/A/" title="artistas começados com a letra A">A</a></li>
+			<li class=""><a href="/letra/B/" title="artistas começados com a letra B">B</a></li>
+			<li class=""><a href="/letra/C/" title="artistas começados com a letra C">C</a></li>
+			<li class=""><a href="/letra/D/" title="artistas começados com a letra D">D</a></li>
+			<li class=""><a href="/letra/E/" title="artistas começados com a letra E">E</a></li>
+			<li class=""><a href="/letra/F/" title="artistas começados com a letra F">F</a></li>
+			<li class=""><a href="/letra/G/" title="artistas começados com a letra G">G</a></li>
+			<li class=""><a href="/letra/H/" title="artistas começados com a letra H">H</a></li>
+			<li class=""><a href="/letra/I/" title="artistas começados com a letra I">I</a></li>
+			<li class=""><a href="/letra/J/" title="artistas começados com a letra J">J</a></li>
+			<li class=""><a href="/letra/K/" title="artistas começados com a letra K">K</a></li>
+			<li class=""><a href="/letra/L/" title="artistas começados com a letra L">L</a></li>
+			<li class=""><a href="/letra/M/" title="artistas começados com a letra M">M</a></li>
+			<li class=""><a href="/letra/N/" title="artistas começados com a letra N">N</a></li>
+			<li class=""><a href="/letra/O/" title="artistas começados com a letra O">O</a></li>
+			<li class=""><a href="/letra/P/" title="artistas começados com a letra P">P</a></li>
+			<li class=""><a href="/letra/Q/" title="artistas começados com a letra Q">Q</a></li>
+			<li class=""><a href="/letra/R/" title="artistas começados com a letra R">R</a></li>
+			<li class=""><a href="/letra/S/" title="artistas começados com a letra S">S</a></li>
+			<li class=""><a href="/letra/T/" title="artistas começados com a letra T">T</a></li>
+			<li class=""><a href="/letra/U/" title="artistas começados com a letra U">U</a></li>
+			<li class=""><a href="/letra/V/" title="artistas começados com a letra V">V</a></li>
+			<li class=""><a href="/letra/W/" title="artistas começados com a letra W">W</a></li>
+			<li class=""><a href="/letra/X/" title="artistas começados com a letra X">X</a></li>
+			<li class=""><a href="/letra/Y/" title="artistas começados com a letra Y">Y</a></li>
+			<li class=""><a href="/letra/Z/" title="artistas começados com a letra Z">Z</a></li>
+			<li class=""><a href="/letra/1/" title="artistas começados com números">0/9</a></li>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+
+
+<div class="right w150px" style="margin-top: 10px; text-align: right; margin-bottom: 5px"><%= link_to "New Contact", new_contact_path%></div>
 <div class="clear"></div>
 
 <%= @aaaa %>
 
-<div id="contacts">
+<script type="text/javascript">
+	$(document).ready(function(){
+		var clicked_on_link = false;
+		$('#list .item').click(function(){
+			if(clicked_on_link == false){
+				alert('busca dados');
+			}else{
+				alert('não busca dados');
+			}
+		});
 
-	<div id="list" class="list">
-		
-		<% @contacts.each do |contact| %>
-			<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
-				<div class="photo">
-					<%# http://twitter.com/users/show/josemarluedke.xml %>
-					<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg">
-				</div>
-				<div class="content">
-					<span class="name"><%= contact.name %></span>
-					<span class="group"><%= (contact.group) ? contact.group.name : nbsp %></span>
-					<div class="details">
-						Phone: <%= contact.phone %>
-						&nbsp;&nbsp;
-						E-mail: <%= (contact.email == "") ? "--" : (link_to contact.email, "mailto:#{contact.email}") %>
-						&nbsp;&nbsp;
-						<%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}" if contact.twitter%>
+		$('a').click(function(){
+			if($(this).attr('data') == 'no_ajax'){
+				clicked_on_link = true;
+			}else{
+				clicked_on_link = false;
+			}
+		});
+	});
+</script>
+<% if @contacts.length > 0 %>
+	<div id="contacts">
+		<div id="list" class="list">
+			<% @contacts.each do |contact| %>
+				<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
+					<div class="photo">
+						<%# http://twitter.com/users/show/josemarluedke.xml %>
+						<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg">
 					</div>
-					<div class="actions">
-						<a href="#" class="favorite"><span><i></i>Favorite</span></a>
+					<div class="content">
+						<div class="details">
+							<div class="text">
+								<span class="name"><%= contact.name %></span>
+								<span class="group"><%= (contact.group) ? contact.group.name : nbsp %></span>
+								<div>
+									Phone: <%= contact.phone %>
+									&nbsp;&nbsp;
+									E-mail: <%= (contact.email == "") ? "--" : (link_to contact.email, "mailto:#{contact.email}", :data => "no_ajax") %>
+									&nbsp;&nbsp;
+									<%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}", :data => "no_ajax" if contact.twitter%>
+								</div>
+							</div>
+							<div class="more showOver">
+								<span class=""></span>
+							</div>
+							<div class="clear"></div>
+						</div>
+						<div class="actions">
+							<div class="left w100px">
+								<a href="#" class="favorite"><span><i></i>Favorite</span></a>
+							</div>
+							<div class="right w200px textRight showOver hidden">
+								<%= link_to raw("<span><i></i>Edit</span>"), edit_contact_path(contact), :title => "Edit", :class => "edit", :data => "no_ajax" %>
+								&nbsp;
+								<%= link_to raw("<span><i></i>Delete</span>"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete", :class => "delete", :data => "no_ajax" %>
+							</div>
+						</div>
 					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="clear"></div>
-			</div>
-		<% end %>
-
-	</div>
-
-	<div id="details">
-		Teste de teste
-	</div>
-</div>
-
-<div class="clear"></div>
-
-<div style="margin-top: 100px;">aa</div>
-
-
-<div class="list">
-	<div class="header">
-		<div class="left w300px">Name</div>
-		<div class="left w250px">E-mail:</div>
-		<div class="left w100px">Phone</div>
-		<div class="left w100px">Cell Phone</div>
-		<div class="left w100px">Group</div>
-		<div class="clear"></div>
-	</div>
-<% @contacts.each do |contact| %>
-	<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
-		<div class="content">
-			<div class="left w300px"><%= link_to_unless_current contact.name, contact %></div>
-			<div class="left w250px"><%= contact.email == "" ? nbsp : contact.email %></div>
-			<div class="left w100px"><%= contact.phone %></div>
-			<div class="left w100px"><%= contact.cell == "" ? nbsp : contact.cell %></div>
-			<div class="left w100px"><%= (contact.group) ? contact.group.name : nbsp %></div>
+			<% end %>
 		</div>
-		<div class="buttons">
-			<%= link_to image_tag("icons/edit.png"), edit_contact_path(contact), :title => "Edit" %>
-			&nbsp;
-			<%= link_to image_tag("icons/delete.png"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete" %>
+		<div id="details">
+			Teste de teste
 		</div>
-		<div class="clear"></div>
 	</div>
-	<% end %>
-</div>
+	<div class="clear"></div>
+<% else %>
+	<div class="center"><h1>No Contacts</h1></div>
+<% end %>

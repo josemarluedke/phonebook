@@ -4,18 +4,18 @@ class ContactsController < ApplicationController
   def index
     
 
-    begin
-      xml = open("http://twitter.com/users/show/josemarluedke.xml")
-    rescue OpenURI::HTTPError => e
-        xml = false
-    end
+#    begin
+#      xml = open("http://twitter.com/users/show/josemarluedke.xml")
+#    rescue OpenURI::HTTPError => e
+#        xml = false
+#    end
 
-    if xml
-      twitter = Nokogiri::XML(xml)
-      @aaaa = twitter.xpath('/user/profile_image_url').text
-    else
-      @aaaa = 'error'
-    end
+#    if xml
+#      twitter = Nokogiri::XML(xml)
+#      @aaaa = twitter.xpath('/user/profile_image_url').text
+#    else
+#      @aaaa = 'error'
+#    end
 
 
 
