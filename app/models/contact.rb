@@ -13,4 +13,10 @@ class Contact < ActiveRecord::Base
 			self.twitter = "@#{self.twitter}";
 		end
 	end
+
+	def bookmark_us
+		self.favorite = !self.favorite
+		self.save
+	end
+
 end

@@ -3,12 +3,12 @@ body 			{color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0
 section,
 header,
 footer 			{display: block;}
-img				{border: none;}
+img         {border: none;}
 .clear			{clear: both;}
 .right			{float: right;}
-.alingRight		{text-align: right;}
-.alingLeft		{text-align: left;}
-.left			{float: left;}
+.alingRight	{text-align: right;}
+.alingLeft	{text-align: left;}
+.left			  {float: left;}
 .center			{text-align: center;}
 .padding		{padding: 5px;}
 .w25px			{width: 25px;}
@@ -39,14 +39,14 @@ img				{border: none;}
 .ml5px			{margin-left: 5px;}
 .mt5px			{margin-top: 5px;}
 .mb5px			{margin-bottom: 5px;}
-.uppercase		{text-transform:uppercase;}
-.textRight		{text-align: right;}
-.textCenter		{text-align: center;}
+.uppercase	{text-transform:uppercase;}
+.textRight	{text-align: right;}
+.textCenter	{text-align: center;}
 div#logo		{float: left; width: 215px; height: 63px; margin-top: 5px;}
-div#logo h1		{visibility: hidden;}
-span.hidden		{visibility: hidden; display: none;}
-.displayNone	{display: none;}
-.hidden       {display: none;}
+div#logo h1	{visibility: hidden;}
+span.hidden	{visibility: hidden; display: none;}
+.displayNone{display: none;}
+.hidden     {display: none;}
 
 
 section.content	{margin-top: 10px; background: #FFF; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; min-height: 400px; padding: 10px; padding-bottom: 20px; border: #D5D3F0 solid 1px;}
@@ -54,7 +54,7 @@ section.content	{margin-top: 10px; background: #FFF; border-radius:6px 6px 6px 6
 
 /* Links */
 a 				{color:#003377; text-decoration:none;}
-a:hover 		{text-decoration:underline;}
+a:hover 	{text-decoration:underline;}
 
 
 /* Forms */
@@ -186,8 +186,11 @@ div.field, div.actions {
 #contacts   {}
 #contacts #list {width: 525px; float: left;}
 #contacts #details  {width: 450px; background: #EFEFEF; float: left; min-height: 300px; border-radius:0 5px 5px 0; -webkit-border-radius:0 5px 5px 0; border: 1px solid #CCC;}
+
+#contacts #details .content {padding: 5px;}
 #contacts #list .item {min-height: 50px; padding: 10px; padding-bottom: 5px; cursor: pointer;}
-#contacts #list .item .photo {float: left; width: 48px; min-height: 48px; margin-right: 5px;}
+#contacts #list .item .photo {float: left; width: 48px; min-height: 48px; margin-right: 5px; margin-top: 5px;}
+#contacts #list .item .photo img {border-radius:3px 2px 3px 3px; -webkit-border-radius:3px 3px 3px 3px;}
 #contacts #list .item .content {width: 450px; padding: 0px;}
 #contacts #list .item .content .name {font-weight: bold; font-size: 15px;}
 #contacts #list .item .content .group{color: #999;}
@@ -200,13 +203,13 @@ div.field, div.actions {
 
 
 #contacts #list .item .content .actions {width: 450px; padding-top: 2px; margin: 0;}
-#contacts #list .item .content .actions a.favorite span i {background: url(../images/icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
-#contacts #list .item .content .actions a.favorite:hover span i {background-position: -16px 0; }
-#contacts #list .item .content .actions a.favorite.favorited span i {background-position: -32px 0; }
-#contacts #list .item .content .actions a.edit span i {background: url(../images/icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
-#contacts #list .item .content .actions a.edit:hover span i {background-position: -22px 0; }
-#contacts #list .item .content .actions a.delete span i {background: url(../images/icons/delete_other.png); width: 13px; height: 13px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
-#contacts #list .item .content .actions a.delete:hover span i {background-position: -16px 0; }
+#contacts #list .item .content .actions a.favorite i {background: url(../images/icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.favorite:hover i {background-position: -16px 0; }
+#contacts #list .item .content .actions a.favorite.favorited i {background-position: -32px 0; }
+#contacts #list .item .content .actions a.edit i {background: url(../images/icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.edit:hover i {background-position: -22px 0; }
+#contacts #list .item .content .actions a.delete i {background: url(../images/icons/delete_other.png); width: 13px; height: 13px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.delete:hover i {background-position: -16px 0; }
 
 
 .filter                           {background: #F9F9F9; border: #EFEFEF solid 1px; border-radius:2px 2px 2px 2px; -webkit-border-radius:2px 2px 2px 2px;}
@@ -216,3 +219,4 @@ div.field, div.actions {
 .filter div.letters ul li a       {color: #666; padding:0 4px 0 4px; font-weight: bold;}
 .filter div.letters ul li:hover   {background: #627AAD; border-radius:3px 3px 3px 3px; -webkit-border-radius:2px 2px 2px 2px;}
 .filter div.letters ul li:hover a {color: #FFF; text-decoration: none;}
+

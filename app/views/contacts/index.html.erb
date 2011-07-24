@@ -38,37 +38,65 @@
 	<div class="clear"></div>
 </div>
 
-
 <div class="right w150px" style="margin-top: 10px; text-align: right; margin-bottom: 5px"><%= link_to "New Contact", new_contact_path%></div>
 <div class="clear"></div>
 
-<%= @aaaa %>
+<% content_for :javascript_block do %>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var clicked_on_link = false;
+			$('#list .item').click(function(){
+				if(clicked_on_link == false){
+					$.ajax({
+						type: "GET",
+						url: '<%= url_for :controller => "contacts" %>/'+$(this).attr('data-contact'),
+						data: '',
+						cache: false,
+						beforeSend: function(){
+							$('#details .content').html('Loading...');
+						},
+						success: function(txt){
+							$('#details .content').html(txt);
+						},
+						error: function(){
+							$('#details .content').html('error a');
+						},
+						stop: function(){
+							$('#details .content').html('error b');
+						}
+					});
+				}
+			});
+			$('a').click(function(){
+				if($(this).attr('data') == 'no_ajax'){
+					clicked_on_link = true;
+				}else{
+					clicked_on_link = false;
+				}
+			});
 
-<script type="text/javascript">
-	$(document).ready(function(){
-		var clicked_on_link = false;
-		$('#list .item').click(function(){
-			if(clicked_on_link == false){
-				alert('busca dados');
-			}else{
-				alert('não busca dados');
-			}
-		});
-
-		$('a').click(function(){
-			if($(this).attr('data') == 'no_ajax'){
-				clicked_on_link = true;
-			}else{
+			$('.favorite').click(function(){
+				App.load_page($(this).attr('href'));
+				if($(this).attr('data-favorite') == 'true'){
+					$(this).children('span').html('Favorite');
+					$(this).removeClass('favorited');
+					$(this).attr('data-favorite', 'false');
+				}else{
+					$(this).children('span').html('Unfavorite');
+					$(this).addClass('favorited');
+					$(this).attr('data-favorite', 'true');
+				}
 				clicked_on_link = false;
-			}
+				return false;
+			});
 		});
-	});
-</script>
+	</script>
+<% end %>
 <% if @contacts.length > 0 %>
 	<div id="contacts">
 		<div id="list" class="list">
 			<% @contacts.each do |contact| %>
-				<div class="item" onmouseover="App.rollOver(this);" onmouseout="App.rollOut(this);">
+				<div class="item" onmouseover="App.roll_over(this);" onmouseout="App.roll_out(this);" data-contact="<%= contact.id %>">
 					<div class="photo">
 						<%# http://twitter.com/users/show/josemarluedke.xml %>
 						<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg">
@@ -93,12 +121,12 @@
 						</div>
 						<div class="actions">
 							<div class="left w100px">
-								<a href="#" class="favorite"><span><i></i>Favorite</span></a>
+								<%= link_to raw("<i></i><span>#{(!contact.favorite) ? 'Favorite' : 'Unfavorite'}</span>"), {:controller => 'contacts', :action => "favorite", :id => contact.id}, :title => "Favorite", :class => "favorite #{'favorited' if contact.favorite}", :data => "no_ajax", "data-favorite" => (contact.favorite) ? true : false %>
 							</div>
 							<div class="right w200px textRight showOver hidden">
-								<%= link_to raw("<span><i></i>Edit</span>"), edit_contact_path(contact), :title => "Edit", :class => "edit", :data => "no_ajax" %>
+								<%= link_to raw("<i></i><span>Edit</span>"), edit_contact_path(contact), :title => "Edit", :class => "edit", :data => "no_ajax" %>
 								&nbsp;
-								<%= link_to raw("<span><i></i>Delete</span>"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete", :class => "delete", :data => "no_ajax" %>
+								<%= link_to raw("<i></i><span>Delete</span>"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete", :class => "delete", :data => "no_ajax" %>
 							</div>
 						</div>
 					</div>
@@ -107,7 +135,9 @@
 			<% end %>
 		</div>
 		<div id="details">
-			Teste de teste
+			<div class="content">
+				
+			</div>
 		</div>
 	</div>
 	<div class="clear"></div>

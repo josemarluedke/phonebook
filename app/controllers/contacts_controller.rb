@@ -30,6 +30,25 @@ class ContactsController < ApplicationController
     end
   end
 
+  def favorite 
+      @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
+      return render_404 unless @contact
+
+      @contact.bookmark_us
+      
+
+      respond_to do |format|
+        format.html {
+          if request.xhr?
+            render :nothing => true
+          else
+            redirect_to(contacts_url, :notice => "Contact was successfully #{'un' unless @contact.favorite}favorited.")
+          end
+
+        }
+      end
+  end
+
   def show
     @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
 
@@ -37,7 +56,7 @@ class ContactsController < ApplicationController
     return render_404 unless @contact
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { render :layout => false if request.xhr? }
       format.xml  { render :xml => @contact }
     end
   end
