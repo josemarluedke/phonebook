@@ -203,7 +203,7 @@ div.field, div.actions {
 
 
 #contacts #list .item .content .actions {width: 450px; padding-top: 2px; margin: 0;}
-#contacts #list .item .content .actions a.favorite i {background: url(../images/icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.favorite i, div.favorite {background: url(../images/icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 #contacts #list .item .content .actions a.favorite:hover i {background-position: -16px 0; }
 #contacts #list .item .content .actions a.favorite.favorited i {background-position: -32px 0; }
 #contacts #list .item .content .actions a.edit i {background: url(../images/icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
@@ -212,11 +212,13 @@ div.field, div.actions {
 #contacts #list .item .content .actions a.delete:hover i {background-position: -16px 0; }
 
 
+
 .filter                           {background: #F9F9F9; border: #EFEFEF solid 1px; border-radius:2px 2px 2px 2px; -webkit-border-radius:2px 2px 2px 2px;}
 .filter div.letters               {float: left; width: 500px;}
-.filter div.letters ul            {margin:0; padding:2px 5px 2px 3px; list-style-type:none; margin-bottom: 23px;}
-.filter div.letters ul li         {display:block; float:left; padding:5px 0 5px 0;}
+.filter div.letters ul            {margin:0; padding:2px 5px 2px 3px; list-style-type:none; margin-bottom: 29px;}
+.filter div.letters ul li         {margin-top: 3px; display:block; float:left; padding:5px 0 5px 0;}
 .filter div.letters ul li a       {color: #666; padding:0 4px 0 4px; font-weight: bold;}
 .filter div.letters ul li:hover   {background: #627AAD; border-radius:3px 3px 3px 3px; -webkit-border-radius:2px 2px 2px 2px;}
 .filter div.letters ul li:hover a {color: #FFF; text-decoration: none;}
 
+div.favorite {margin: 0; background-position: -17px 0; width: 14px;}
