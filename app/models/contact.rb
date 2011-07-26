@@ -8,7 +8,7 @@ class Contact < ActiveRecord::Base
 		where("user_id = #{current_user.id}").all :order => "name"
 	end
 
-	def before_save
+	def self.before_save
 		if self.twitter != "" && self.twitter[0...1] != "@"
 			self.twitter = "@#{self.twitter}";
 		end

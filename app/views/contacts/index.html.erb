@@ -54,16 +54,20 @@
 						data: '',
 						cache: false,
 						beforeSend: function(){
+							App.show_load();
 							$('#details .content').html('Loading...');
 						},
 						success: function(txt){
+							App.hide_load();
 							$('#details .content').html(txt);
 						},
 						error: function(){
-							$('#details .content').html('error a');
+							App.hide_load();
+							App.show_error();
 						},
 						stop: function(){
-							$('#details .content').html('error b');
+							App.hide_load();
+							App.show_error();
 						}
 					});
 				}
