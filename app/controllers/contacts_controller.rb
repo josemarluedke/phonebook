@@ -27,6 +27,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @contacts }
+      format.json  { render :json => @contacts }
     end
   end
 
@@ -58,6 +59,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       format.html { render :layout => false if request.xhr? }
       format.xml  { render :xml => @contact }
+
     end
   end
 

@@ -201,4 +201,13 @@ Devise.setup do |config|
   #   manager.intercept_401 = false
   #   manager.default_strategies(:scope => :user).unshift :some_external_strategy
   # end
+
+
+
+  # Omniauth
+  config.omniauth :facebook, "161649160579596", "ecdbba6745a9a6fdfe1fbff317cda08d",
+      {:client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}} 
+
+
+
 end

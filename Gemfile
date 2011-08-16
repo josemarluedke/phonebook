@@ -13,5 +13,8 @@ gem 'sqlite3'
 
 gem "devise", "~> 1.4.2"
 gem "jquery-rails", "~> 1.0.12"
-gem "nokogiri", "~> 1.5.0"
+gem "nokogiri", "~> 1.4.2"
 gem "rest-open-uri", "~> 1.0.0"
+
+#gem "oa-oauth", :require => "omniauth/oauth"
+gem "omniauth", "~> 0.2.6"
