@@ -208,6 +208,7 @@ Devise.setup do |config|
   config.omniauth :facebook, "161649160579596", "ecdbba6745a9a6fdfe1fbff317cda08d",
       {:client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}} 
 
-
+  config.omniauth :twitter, "qea1JWoajebK3AsgIWQGA", "3NsBPsuixeo2ORjz9Xvnrbfie4nEjzcY6FjR0uVj6Q",
+      {:client_options => {:ssl => {:ca_path => '/etc/ssl/certs'}}} 
 
 end
