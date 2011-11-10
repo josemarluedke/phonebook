@@ -22,3 +22,4 @@ gem "omniauth", "~> 0.2.6"
 # gem 'mysql2', '~> 0.2.6' #[Old gem]
 
 gem 'pg' # PostgreSQL
+gem 'sass'

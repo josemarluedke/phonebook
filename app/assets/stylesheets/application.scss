@@ -1,4 +1,4 @@
-body 			{color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0F0 url(../images/bg.png) top repeat-x; margin:auto; padding:0px; width: 1000px;}
+body 			{color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0F0 url(bg.png) top repeat-x; margin:auto; padding:0px; width: 1000px;}
 
 section,
 header,
@@ -120,8 +120,8 @@ header#menu ul li ul li:hover ul.second {visibility:visible;}
 header#menu ul li ul li ul.second li a {color:#333333;}
 header#menu ul li ul li ul.second li:hover a {color:#FFFFFF;}
 header#menu li.line 				{background:#FDFDFD; border-top:1px solid #8397BF; height:0px; padding:0; margin:3px;}
-header#menu li.subMenuRight 		{background:url(../images/bg/sub-menu-right.gif) 160px  no-repeat;}
-header#menu li.subMenuRight:hover 	{background:#8397BF url(../Images/Bg/sub-menu-right.gif) 160px  no-repeat;}
+header#menu li.subMenuRight 		{background:url(bg/sub-menu-right.gif) 160px  no-repeat;}
+header#menu li.subMenuRight:hover 	{background:#8397BF url(Bg/sub-menu-right.gif) 160px  no-repeat;}
 header#menu .subMenuDow 			{background:url(../Iiages/Bg/sub-menu-dow.gif) right no-repeat; width:17px; height:20px}
 
 header#menu li.userDetails 			{height: auto; padding-left: 10px; margin-bottom: 15px;}
@@ -197,18 +197,18 @@ div.field, div.actions {
 #contacts #list .item .content .details {padding-top: 5px; }
 #contacts #list .item .content .details .text {width: 425px; float: left;}
 #contacts #list .item .content .details .more {float: right; width: 25px; text-align: right; display: none;}
-#contacts #list .item .content .details .more span {background: url(../images/icons/arrows.png); width: 20px; height: 20px; display: inline-block; vertical-align: baseline; margin-bottom: -3px;}
+#contacts #list .item .content .details .more span {background: url(icons/arrows.png); width: 20px; height: 20px; display: inline-block; vertical-align: baseline; margin-bottom: -3px;}
 #contacts #list .item .content .details .more span.selected {background-position: -32px 22px;}
 #contacts #list .item .content .details .more span.back {background-position: -32px 0;}
 
 
 #contacts #list .item .content .actions {width: 450px; padding-top: 2px; margin: 0;}
-#contacts #list .item .content .actions a.favorite i, div.favorite {background: url(../images/icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.favorite i, div.favorite {background: url(icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 #contacts #list .item .content .actions a.favorite:hover i {background-position: -16px 0; }
 #contacts #list .item .content .actions a.favorite.favorited i {background-position: -32px 0; }
-#contacts #list .item .content .actions a.edit i {background: url(../images/icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.edit i {background: url(icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 #contacts #list .item .content .actions a.edit:hover i {background-position: -22px 0; }
-#contacts #list .item .content .actions a.delete i {background: url(../images/icons/delete_other.png); width: 13px; height: 13px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.delete i {background: url(icons/delete_other.png); width: 13px; height: 13px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 #contacts #list .item .content .actions a.delete:hover i {background-position: -16px 0; }
 
 
