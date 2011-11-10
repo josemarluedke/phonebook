@@ -2,7 +2,6 @@ class ContactsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    
 
 #    begin
 #      xml = open("http://twitter.com/users/show/josemarluedke.xml")

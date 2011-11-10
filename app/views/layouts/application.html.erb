@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html dir="ltr" lang="<%= I18n.locale %>">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<%= dispatcher_tag %>
 	<title><%= "#{@page_title} - " if @page_title %>Phonebook</title>
 	<%= stylesheet_link_tag "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tag %>
 	<%= yield :javascript_block %>
+	
+	<!--[if lt IE 9]>
+		<%= javascript_include_tag "ie/html5" %>
+	<![endif]-->
 </head>
 <body>
 	<div class="loading-area">
