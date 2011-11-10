@@ -18,3 +18,7 @@ gem "rest-open-uri", "~> 1.0.0"
 
 #gem "oa-oauth", :require => "omniauth/oauth"
 gem "omniauth", "~> 0.2.6"
+
+# gem 'mysql2', '~> 0.2.6' #[Old gem]
+
+gem 'pg' # PostgreSQL

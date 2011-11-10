@@ -95,6 +95,7 @@ GEM
       oa-oauth (= 0.2.6)
       oa-openid (= 0.2.6)
     orm_adapter (0.0.5)
+    pg (0.11.0)
     polyglot (0.3.1)
     pyu-ruby-sasl (0.0.3.3)
     rack (1.2.3)
@@ -144,6 +145,7 @@ DEPENDENCIES
   jquery-rails (~> 1.0.12)
   nokogiri (~> 1.4.2)
   omniauth (~> 0.2.6)
+  pg
   rails (= 3.0.9)
   rest-open-uri (~> 1.0.0)
   sqlite3
