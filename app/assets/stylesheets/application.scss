@@ -3,12 +3,12 @@ body 			{color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0
 section,
 header,
 footer 			{display: block;}
-img         {border: none;}
+img         	{border: none;}
 .clear			{clear: both;}
 .right			{float: right;}
-.alingRight	{text-align: right;}
-.alingLeft	{text-align: left;}
-.left			  {float: left;}
+.alingRight		{text-align: right;}
+.alingLeft		{text-align: left;}
+.left			{float: left;}
 .center			{text-align: center;}
 .padding		{padding: 5px;}
 .w25px			{width: 25px;}
@@ -39,21 +39,21 @@ img         {border: none;}
 .ml5px			{margin-left: 5px;}
 .mt5px			{margin-top: 5px;}
 .mb5px			{margin-bottom: 5px;}
-.uppercase	{text-transform:uppercase;}
-.textRight	{text-align: right;}
-.textCenter	{text-align: center;}
+.uppercase		{text-transform:uppercase;}
+.textRight		{text-align: right;}
+.textCenter		{text-align: center;}
 div#logo		{float: left; width: 215px; height: 63px; margin-top: 5px;}
-div#logo h1	{visibility: hidden;}
-span.hidden	{visibility: hidden; display: none;}
-.displayNone{display: none;}
-.hidden     {display: none;}
+div#logo h1		{visibility: hidden;}
+span.hidden		{visibility: hidden; display: none;}
+.displayNone	{display: none;}
+.hidden     	{display: none;}
 
 
 section.content	{margin-top: 10px; background: #FFF; border-radius:6px 6px 6px 6px; -webkit-border-radius:6px 6px 6px 6px; min-height: 400px; padding: 10px; padding-bottom: 20px; border: #D5D3F0 solid 1px;}
 
 
 /* Links */
-a 				{color:#003377; text-decoration:none;}
+a 			{color:#003377; text-decoration:none;}
 a:hover 	{text-decoration:underline;}
 
 
@@ -93,14 +93,15 @@ input.inputCheckbox {width: 13px; height: 13px}
 
 .boxNotice {margin-top: 10px; width: 760px; float: right;}
 
+.btnNew		{margin-top: 10px; text-align: right; margin-bottom: 5px; clear: both;}
 
-div.list		{}
-div.list div.item {background: #F9F9F9; border-bottom: solid 1px #CCCCCC; padding: 5px; padding-bottom: 2px;}
-div.list div.item div.content {float:left; width: 915px; padding-top: 5px;}
-div.list div.item div.buttons {float:right; width: 50px; text-align: right;}
-div.list div.header	{background: #666666; color: #FFFFFF; padding: 5px; font-weight: bold;}
-div.list div.total	{font-weight: bold; margin-top: 15px; text-align: right; font-size: 12px;}
-div.list div.total span.num	{color: #003377;}
+div.list						{}
+div.list div.item 				{background: #F9F9F9; border-bottom: solid 1px #CCCCCC; padding: 5px; padding-bottom: 2px;}
+div.list div.item div.content 	{float:left; width: 915px; padding-top: 5px;}
+div.list div.item div.buttons 	{float:right; width: 50px; text-align: right;}
+div.list div.header				{background: #666666; color: #FFFFFF; padding: 5px; font-weight: bold;}
+div.list div.total				{font-weight: bold; margin-top: 15px; text-align: right; font-size: 12px;}
+div.list div.total span.num		{color: #003377;}
 
 
 /* Menu Principal */
@@ -183,50 +184,52 @@ div.field, div.actions {
 
 
 
-#contacts   {}
-#contacts #list {width: 525px; float: left;}
-#contacts #details  {width: 450px; background: #EFEFEF; float: left; min-height: 300px; border-radius:0 5px 5px 0; -webkit-border-radius:0 5px 5px 0; border: 1px solid #CCC;}
+#contacts   										{margin-top: 10px;}
+#contacts #list 									{width: 525px; float: left;}
+#contacts #details  								{width: 450px; background: #EFEFEF; float: left; min-height: 300px; border-radius:0 5px 5px 0; -webkit-border-radius:0 5px 5px 0; border: 1px solid #CCC;}
 
-#contacts #details .content {padding: 5px;}
-#contacts #list .item {min-height: 50px; padding: 10px; padding-bottom: 5px; cursor: pointer;}
-#contacts #list .item .photo {float: left; width: 48px; min-height: 48px; margin-right: 5px; margin-top: 5px;}
-#contacts #list .item .photo img {border-radius:3px 2px 3px 3px; -webkit-border-radius:3px 3px 3px 3px;}
-#contacts #list .item .content {width: 450px; padding: 0px;}
-#contacts #list .item .content .name {font-weight: bold; font-size: 15px;}
-#contacts #list .item .content .group{color: #999;}
-#contacts #list .item .content .details {padding-top: 5px; }
-#contacts #list .item .content .details .text {width: 425px; float: left;}
-#contacts #list .item .content .details .more {float: right; width: 25px; text-align: right; display: none;}
-#contacts #list .item .content .details .more span {background: url(icons/arrows.png); width: 20px; height: 20px; display: inline-block; vertical-align: baseline; margin-bottom: -3px;}
+#contacts #details .content 						{padding: 5px;}
+#contacts #list .item 								{min-height: 50px; padding: 10px; padding-bottom: 5px; cursor: pointer;}
+#contacts #list .item .photo 						{float: left; width: 48px; min-height: 48px; margin-right: 5px; margin-top: 5px;}
+#contacts #list .item .photo img 					{border-radius:3px 2px 3px 3px; -webkit-border-radius:3px 3px 3px 3px;}
+#contacts #list .item .content 						{width: 450px; padding: 0px;}
+#contacts #list .item .content .name 				{font-weight: bold; font-size: 15px;}
+#contacts #list .item .content .group				{color: #999;}
+#contacts #list .item .content .details				{padding-top: 5px; }
+#contacts #list .item .content .details .text 		{width: 425px; float: left;}
+#contacts #list .item .content .details .more 		{float: right; width: 25px; text-align: right; display: none;}
+#contacts #list .item .content .details .more span  {background: url(icons/arrows.png); width: 20px; height: 20px; display: inline-block; vertical-align: baseline; margin-bottom: -3px;}
 #contacts #list .item .content .details .more span.selected {background-position: -32px 22px;}
 #contacts #list .item .content .details .more span.back {background-position: -32px 0;}
 
 
-#contacts #list .item .content .actions {width: 450px; padding-top: 2px; margin: 0;}
-#contacts #list .item .content .actions a.favorite i, div.favorite {background: url(icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
-#contacts #list .item .content .actions a.favorite:hover i {background-position: -16px 0; }
-#contacts #list .item .content .actions a.favorite.favorited i {background-position: -32px 0; }
-#contacts #list .item .content .actions a.edit i {background: url(icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
-#contacts #list .item .content .actions a.edit:hover i {background-position: -22px 0; }
-#contacts #list .item .content .actions a.delete i {background: url(icons/delete_other.png); width: 13px; height: 13px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
-#contacts #list .item .content .actions a.delete:hover i {background-position: -16px 0; }
+#contacts #list .item .content .actions 							{width: 450px; padding-top: 2px; margin: 0;}
+#contacts #list .item .content .actions a.favorite i, div.favorite 	{background: url(icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.favorite:hover i 			{background-position: -16px 0; }
+#contacts #list .item .content .actions a.favorite.favorited i 		{background-position: -32px 0; }
+#contacts #list .item .content .actions a.edit i 					{background: url(icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.edit:hover i 				{background-position: -22px 0; }
+#contacts #list .item .content .actions a.delete i 					{background: url(icons/delete_other.png); width: 13px; height: 13px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.delete:hover i 			{background-position: -16px 0; }
 
 
 
-.filter                           {background: #F9F9F9; border: #EFEFEF solid 1px; border-radius:2px 2px 2px 2px; -webkit-border-radius:2px 2px 2px 2px;}
-.filter div.letters               {float: left; width: 500px;}
-.filter div.letters ul            {margin:0; padding:2px 5px 2px 3px; list-style-type:none; margin-bottom: 29px;}
-.filter div.letters ul li         {margin-top: 3px; display:block; float:left; padding:5px 0 5px 0;}
-.filter div.letters ul li a       {color: #666; padding:0 4px 0 4px; font-weight: bold;}
-.filter div.letters ul li:hover   {background: #627AAD; border-radius:3px 3px 3px 3px; -webkit-border-radius:2px 2px 2px 2px;}
-.filter div.letters ul li:hover a {color: #FFF; text-decoration: none;}
+.filter                           	{background: #F9F9F9; border: #EFEFEF solid 1px; border-radius:2px 2px 2px 2px; -webkit-border-radius:2px 2px 2px 2px;}
+.filter div.letters               	{float: left; width: 523px;}
+.filter div.letters ul            	{margin:0; padding:2px 5px 2px 3px; list-style-type:none; margin-bottom: 29px;}
+.filter div.letters ul li         	{margin-top: 3px; display:block; float:left; padding:5px 0 5px 0;}
+.filter div.letters ul li a       	{color: #666; padding:0 4px 0 4px; font-weight: bold;}
+.filter div.letters ul li:hover   	{background: #627AAD; border-radius:3px 3px 3px 3px; -webkit-border-radius:2px 2px 2px 2px;}
+.filter div.letters ul li:hover a 	{color: #FFF; text-decoration: none;}
+.filter div.advanced 				{float: left; width: 300px; padding-top: 5px;}
+.filter div.advanced input			{width: 290px;}
 
-div.favorite {margin: 0; background-position: -17px 0; width: 14px;}
+div.favorite 						{margin: 0; background-position: -17px 0; width: 14px;}
 
 
 
 
 /* Loading Area */
-.loading-area     {position: fixed; display: none;}
+.loading-area    		{position: fixed; display: none;}
 .loading-area-container {position:absolute; z-index:10000; top:0; left:375px; width: 250px; font-size:12px; color:#FFFFFF; text-align:center;}
-.loading-area-text    {font-weight:bold; padding:8px; padding-bottom: 3px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px; background:#444444;}
+.loading-area-text    	{font-weight:bold; padding:8px; padding-bottom: 3px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px; background:#444444;}

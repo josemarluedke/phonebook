@@ -2,16 +2,15 @@
 <html dir="ltr" lang="<%= I18n.locale %>">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<%= dispatcher_tag %>
 	<title><%= "#{@page_title} - " if @page_title %>Phonebook</title>
+	<%= dispatcher_tag %>
+	<!--[if lt IE 9]>
+		<%= javascript_include_tag "ie/html5" %>
+	<![endif]-->
 	<%= stylesheet_link_tag "application" %>
 	<%= javascript_include_tag "application" %>
 	<%= csrf_meta_tag %>
 	<%= yield :javascript_block %>
-	
-	<!--[if lt IE 9]>
-		<%= javascript_include_tag "ie/html5" %>
-	<![endif]-->
 </head>
 <body>
 	<div class="loading-area">
@@ -23,7 +22,7 @@
 	</div>
 	<div id="logo"><%= link_to image_tag("logo.png"), "/" %><h1>Phonebook</h1></div>
 	<header id="menu">
-		<div class="left" style="width:400px">
+		<nav class="left" style="width:400px">
 			<ul>
 				<li>
 					<%= link_to "Home", '/' %>
@@ -35,7 +34,7 @@
 					<%= link_to "Groups", '/groups' %>
 				</li>
 			</ul>
-		</div>
+		</nav>
 		<div class="right" style="width:350px;">
 			<ul class="right">
 				<% if user_signed_in? %>

@@ -1,7 +1,6 @@
-<div class="title left w300px"><%= @page_title = "My Contacts" %></div>
-<div class="clear"></div>
+<div class="title"><%= @page_title = "My Contacts" %></div>
 
-
+<div class="btnNew"><%= link_to "New Contact", new_contact_path%></div>
 
 <div class="filter">
 	<div class="letters">
@@ -36,12 +35,11 @@
 			<li class=""><a href="/letra/1/" title="artistas começados com números">0/9</a></li>
 		</ul>
 	</div>
+	<div class="advanced">
+		<input type="text" value="">
+	</div>
 	<div class="clear"></div>
 </div>
-
-<div class="right w150px" style="margin-top: 10px; text-align: right; margin-bottom: 5px"><%= link_to "New Contact", new_contact_path%></div>
-<div class="clear"></div>
-
 
 <% if @contacts.length > 0 %>
 	<div id="contacts">
@@ -50,7 +48,7 @@
 				<div class="item" onmouseover="App.roll_over(this);" onmouseout="App.roll_out(this);" data-contact="<%= contact.id %>" href-contact="<%= contact_path contact %>">
 					<div class="photo">
 						<%# http://twitter.com/users/show/josemarluedke.xml %>
-						<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg">
+						<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg" />
 					</div>
 					<div class="content">
 						<div class="details">
@@ -62,7 +60,7 @@
 									&nbsp;&nbsp;
 									E-mail: <%= (contact.email == "") ? "--" : (link_to contact.email, "mailto:#{contact.email}", :data => "no_ajax") %>
 									&nbsp;&nbsp;
-									<%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}", :data => "no_ajax" if contact.twitter%>
+									<%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}", :data => "no_ajax" if contact.twitter %>
 								</div>
 							</div>
 							<div class="more showOver">
