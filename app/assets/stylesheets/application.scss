@@ -132,52 +132,52 @@ header#menu li.userDetails:hover 	{background: none;}
 
 
 pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+	background-color: #eee;
+	padding: 10px;
+	font-size: 11px;
 }
 
 
 div.field, div.actions {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 
 .field_with_errors {
-  padding: 1px;
-  background-color: red;
-  display: table;
+	padding: 1px;
+	background-color: red;
+	display: table;
 }
 
 .field_with_errors label {
-  color: #FFFFFF;
+	color: #FFFFFF;
 }
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px;
-  padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  border-radius:6px 6px 6px 6px;
-  -webkit-border-radius:6px 6px 6px 6px;
+	width: 450px;
+	border: 2px solid red;
+	padding: 7px;
+	padding-bottom: 0;
+	margin-bottom: 20px;
+	background-color: #f0f0f0;
+	border-radius:6px 6px 6px 6px;
+	-webkit-border-radius:6px 6px 6px 6px;
 }
 
 #error_explanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  margin-bottom: 0px;
-  background-color: #c00;
-  color: #fff;
+	text-align: left;
+	font-weight: bold;
+	padding: 5px 5px 5px 15px;
+	font-size: 12px;
+	margin: -7px;
+	margin-bottom: 0px;
+	background-color: #c00;
+	color: #fff;
 }
 
 #error_explanation ul li {
-  font-size: 12px;
-  list-style: square;
+	font-size: 12px;
+	list-style: square;
 }
 
 
@@ -204,7 +204,7 @@ div.field, div.actions {
 
 
 #contacts #list .item .content .actions 							{width: 450px; padding-top: 2px; margin: 0;}
-#contacts #list .item .content .actions a.favorite i, div.favorite 	{background: url(icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+#contacts #list .item .content .actions a.favorite i, div.favoriteFilter 	{background: url(icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 #contacts #list .item .content .actions a.favorite:hover i 			{background-position: -16px 0; }
 #contacts #list .item .content .actions a.favorite.favorited i 		{background-position: -32px 0; }
 #contacts #list .item .content .actions a.edit i 					{background: url(icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
@@ -221,11 +221,11 @@ div.field, div.actions {
 .filter div.letters ul li a       	{color: #666; padding:0 4px 0 4px; font-weight: bold;}
 .filter div.letters ul li:hover   	{background: #627AAD; border-radius:3px 3px 3px 3px; -webkit-border-radius:2px 2px 2px 2px;}
 .filter div.letters ul li:hover a 	{color: #FFF; text-decoration: none;}
-.filter div.advanced 				{float: left; width: 300px; padding-top: 5px;}
+.filter div.advanced 				{float: left; width: 370px; padding-top: 5px;}
 .filter div.advanced input			{width: 290px;}
 
-div.favorite 						{margin: 0; background-position: -17px 0; width: 14px;}
-
+div.favoriteFilter             		{margin: 0; background-position: -17px 0; width: 14px;}
+div.favoriteFilter:hover            {background-position: -32px 0;}
 
 
 
