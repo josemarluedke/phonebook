@@ -13,7 +13,7 @@ class Contact < ActiveRecord::Base
 		elsif not options[:search].blank?
 			where = "and name ILIKE '%#{options[:search]}%'"
 		elsif not options[:number].blank?
-			where = "and name ~ '^([0-9]{1,10})'"
+			where = "and name ~ '^([0-9]{1,})'"
 		end
 
 		where("user_id = #{current_user.id} #{where}").all :order => "name"

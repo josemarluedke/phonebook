@@ -61,7 +61,7 @@ a:hover     {text-decoration:underline;}
 input,
 select,
 input.input,
-file            {color:#444444; border:1px solid #B8B8B8; font-family:Arial, Verdana; font-size:11px; width: 975px; height: 20px;}
+file            {color:#444444; border:1px solid #B8B8B8; font-family:Arial, Verdana; font-size:11px; width: 100%; height: 20px;}
 textarea        {color:#444444; font-size:12px; font-family:Arial, Helvetica, sans-serif; border:1px solid #B8B8B8; width: 970px; height: 150px;}
 input[type=submit],
 input.submit,
@@ -142,6 +142,9 @@ div.field, div.actions {
     margin-bottom: 10px;
 }
 
+div.contact.photo {float: left; width: 110px; margin-bottom: 10px;}
+div.contact.name_email {float: left; width: 862px;}
+div.contact.email {margin-right: 5px; float: left; width: 657px;}
 
 .field_with_errors {
     padding: 1px;
