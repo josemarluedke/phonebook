@@ -3,97 +3,102 @@
 <div class="btnNew"><%= link_to "New Contact", new_contact_path%></div>
 
 <div class="filter">
-	<div class="letters">
-		<ul>
-			<li style="margin: 0 "><a href="<%= url_for contacts_path %>?favorite=1"><div class="favoriteFilter"></div></a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=A" title="contacts starting with letter A">A</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=B" title="contacts starting with letter B">B</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=C" title="contacts starting with letter C">C</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=D" title="contacts starting with letter D">D</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=E" title="contacts starting with letter E">E</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=F" title="contacts starting with letter F">F</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=G" title="contacts starting with letter G">G</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=H" title="contacts starting with letter H">H</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=I" title="contacts starting with letter I">I</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=J" title="contacts starting with letter J">J</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=K" title="contacts starting with letter K">K</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=L" title="contacts starting with letter L">L</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=M" title="contacts starting with letter M">M</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=N" title="contacts starting with letter N">N</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=O" title="contacts starting with letter O">O</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=P" title="contacts starting with letter P">P</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=Q" title="contacts starting with letter Q">Q</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=R" title="contacts starting with letter R">R</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=S" title="contacts starting with letter S">S</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=T" title="contacts starting with letter T">T</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=U" title="contacts starting with letter U">U</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=V" title="contacts starting with letter V">V</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=W" title="contacts starting with letter W">W</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=X" title="contacts starting with letter X">X</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=Y" title="contacts starting with letter Y">Y</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterLetter=Z" title="contacts starting with letter Z">Z</a></li>
-			<li><a href="<%= url_for contacts_path %>?filterNumber=1" title="contacts starting with numbers">0/9</a></li>
-			<li><a href="<%= url_for contacts_path %>">Clear Filter</a></li>
-		</ul>
-	</div>
-	<div class="advanced">
-		<form action"" method="GET">
-			<input type="text" name="q" value="<%= request.GET['q'] %>" />
-			<input type="submit" value="Ok" style="width: 50px;" />
-		</form>
-	</div>
-	<div class="clear"></div>
+    <div class="letters">
+        <ul>
+            <li style="margin: 0 "><a href="<%= url_for contacts_path %>?favorite=1"><div class="favoriteFilter"></div></a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=A" title="contacts starting with letter A">A</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=B" title="contacts starting with letter B">B</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=C" title="contacts starting with letter C">C</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=D" title="contacts starting with letter D">D</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=E" title="contacts starting with letter E">E</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=F" title="contacts starting with letter F">F</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=G" title="contacts starting with letter G">G</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=H" title="contacts starting with letter H">H</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=I" title="contacts starting with letter I">I</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=J" title="contacts starting with letter J">J</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=K" title="contacts starting with letter K">K</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=L" title="contacts starting with letter L">L</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=M" title="contacts starting with letter M">M</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=N" title="contacts starting with letter N">N</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=O" title="contacts starting with letter O">O</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=P" title="contacts starting with letter P">P</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=Q" title="contacts starting with letter Q">Q</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=R" title="contacts starting with letter R">R</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=S" title="contacts starting with letter S">S</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=T" title="contacts starting with letter T">T</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=U" title="contacts starting with letter U">U</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=V" title="contacts starting with letter V">V</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=W" title="contacts starting with letter W">W</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=X" title="contacts starting with letter X">X</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=Y" title="contacts starting with letter Y">Y</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterLetter=Z" title="contacts starting with letter Z">Z</a></li>
+            <li><a href="<%= url_for contacts_path %>?filterNumber=1" title="contacts starting with numbers">0/9</a></li>
+            <li><a href="<%= url_for contacts_path %>">Clear Filter</a></li>
+        </ul>
+    </div>
+    <div class="advanced">
+        <form action"" method="GET">
+            <input type="text" name="q" value="<%= request.GET['q'] %>" />
+            <input type="submit" value="Ok" style="width: 50px;" />
+        </form>
+    </div>
+    <div class="clear"></div>
 </div>
 
 <% if @contacts.length > 0 %>
-	<div id="contacts">
-		<div id="list" class="list">
-			<% @contacts.each do |contact| %>
-				<div class="item" onmouseover="App.roll_over(this);" onmouseout="App.roll_out(this);" data-contact="<%= contact.id %>" href-contact="<%= contact_path contact %>">
-					<div class="photo">
-						<%# http://twitter.com/users/show/josemarluedke.xml %>
-						<img height="48" width="48" src="http://a3.twimg.com/profile_images/1372313760/Josemar_Davi_Luedke_2011-2__c_pia__normal.jpg" />
-					</div>
-					<div class="content">
-						<div class="details">
-							<div class="text">
-								<span class="name"><%= contact.name %></span>
-								<span class="group"><%= (contact.group) ? contact.group.name : nbsp %></span>
-								<div>
-									Phone: <%= contact.phone %>
-									&nbsp;&nbsp;
-									E-mail: <%= (contact.email == "") ? "--" : (link_to contact.email, "mailto:#{contact.email}", :data => "no_ajax") %>
-									&nbsp;&nbsp;
-									<%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}", :data => "no_ajax" if contact.twitter %>
-								</div>
-							</div>
-							<div class="more showOver">
-								<span></span>
-							</div>
-							<div class="clear"></div>
-						</div>
-						<div class="actions">
-							<div class="left w100px">
-								<%= link_to raw("<i></i><span>#{(!contact.favorite) ? 'Favorite' : 'Unfavorite'}</span>"), {:controller => contacts_path, :action => "favorite", :id => contact.id}, :title => "Favorite", :class => "favorite #{'favorited' if contact.favorite}", :data => "no_ajax", "data-favorite" => (contact.favorite) ? true : false %>
-							</div>
-							<div class="right w200px textRight showOver hidden">
-								<%= link_to raw("<i></i><span>Edit</span>"), edit_contact_path(contact), :title => "Edit", :class => "edit", :data => "no_ajax" %>
-								&nbsp;
-								<%= link_to raw("<i></i><span>Delete</span>"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete", :class => "delete", :data => "no_ajax" %>
-							</div>
-						</div>
-					</div>
-					<div class="clear"></div>
-				</div>
-			<% end %>
-		</div>
-		<div id="details">
-			<div class="content">
-				<p>Click a contact for details.</p>
-			</div>
-		</div>
-	</div>
-	<div class="clear"></div>
+    <div id="contacts">
+        <div id="list" class="list">
+            <% @contacts.each do |contact| %>
+                <div class="item" onmouseover="App.roll_over(this);" onmouseout="App.roll_out(this);" data-contact="<%= contact.id %>" href-contact="<%= contact_path contact %>">
+                    <div class="photo">
+                        <%=
+                        if contact.img_url.nil?
+                            image_tag "silhouette.gif", :width => 48
+                        else
+                            image_tag contact.img_url, :width => 48
+                        end
+                        %>
+                    </div>
+                    <div class="content">
+                        <div class="details">
+                            <div class="text">
+                                <span class="name"><%= contact.name %></span>
+                                <span class="group"><%= (contact.group) ? contact.group.name : nbsp %></span>
+                                <div>
+                                    Phone: <%= contact.phone %>
+                                    &nbsp;&nbsp;
+                                    E-mail: <%= (contact.email == "") ? "--" : (link_to contact.email, "mailto:#{contact.email}", :data => "no_ajax") %>
+                                    &nbsp;&nbsp;
+                                    <%= link_to contact.twitter, "http://twitter.com/#{contact.twitter[1..contact.twitter.length]}", :data => "no_ajax" if contact.twitter %>
+                                </div>
+                            </div>
+                            <div class="more showOver">
+                                <span></span>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="actions">
+                            <div class="left w100px">
+                                <%= link_to raw("<i></i><span>#{(!contact.favorite) ? 'Favorite' : 'Unfavorite'}</span>"), {:controller => contacts_path, :action => "favorite", :id => contact.id}, :title => "Favorite", :class => "favorite #{'favorited' if contact.favorite}", :data => "no_ajax", "data-favorite" => (contact.favorite) ? true : false %>
+                            </div>
+                            <div class="right w200px textRight showOver hidden">
+                                <%= link_to raw("<i></i><span>Edit</span>"), edit_contact_path(contact), :title => "Edit", :class => "edit", :data => "no_ajax" %>
+                                &nbsp;
+                                <%= link_to raw("<i></i><span>Delete</span>"), contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete", :class => "delete", :data => "no_ajax" %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            <% end %>
+        </div>
+        <div id="details">
+            <div class="content">
+                <p>Click a contact for details.</p>
+            </div>
+        </div>
+    </div>
+    <div class="clear"></div>
 <% else %>
-	<div class="center"><h1>No Contacts</h1></div>
+    <div class="center"><h1>No Contacts</h1></div>
 <% end %>

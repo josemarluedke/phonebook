@@ -1,25 +1,13 @@
 Phonebook::Application.routes.draw do
   resources :contacts do
-      member do
-        get 'farorite'
-      end
-
       collection do
         get 'favorite'
+        get 'img_url'
       end
 
   end
-
   resources :groups
-
-  get "home/index"
-
- 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-
-
-
-
 
   #devise_for :users, :path => "users", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'cmon_let_me_in' }
 

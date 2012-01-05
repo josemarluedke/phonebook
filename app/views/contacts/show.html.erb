@@ -1,48 +1,44 @@
-<p>
-  <b>Name:</b>
-  <%= @contact.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @contact.email %>
-</p>
-
+<div class="contact photo">
+    <div class="img_photo">
+        <%=
+        if @contact.img_url.nil?
+            image_tag "silhouette.gif", :width => 100
+        else
+            image_tag @contact.img_url, :width => 100
+        end
+        %>
+    </div>
+</div>
+<h1><%= @contact.name %></h1>
+<h3><%= @contact.email %></h3>
 <p>
   <b>Phone:</b>
   <%= @contact.phone %>
-</p>
-
-<p>
+  &nbsp;
   <b>Cell:</b>
   <%= @contact.cell %>
 </p>
-
-<p>
-  <b>Obs:</b>
-  <%= @contact.obs %>
-</p>
-
-<p>
-  <b>Phone:</b>
-  <%= @contact.phone %>
-</p>
-
+<br />
 <p>
   <b>Birthday:</b>
-  <%= @contact.birthday %>
+  <%= @contact.birthday.strftime "%d %B" unless @contact.birthday.nil? %>
 </p>
 
 <p>
   <b>Group:</b>
   <%= (@contact.group) ? @contact.group.name : nbsp %>
 </p>
-
-
+<p>
+  <b>Obs:</b>
+  <%= @contact.obs %>
+</p>
 <p>
   <b>Created at:</b>
-  <%= @contact.created_at %>
+  <%= @contact.created_at.strftime "%d/%m/%Y %H:%M:%S" %>
 </p>
 
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<div class="actions">
+    <%= link_to raw("<i></i><span>Edit</span>"), edit_contact_path(@contact), :title => "Edit", :class => "edit", :data => "no_ajax" %>
+    &nbsp;
+    <%= link_to raw("<i></i><span>Delete</span>"), @contact, :confirm => 'Are you sure?', :method => :delete, :title => "Delete", :class => "delete", :data => "no_ajax" %>
+</div>
