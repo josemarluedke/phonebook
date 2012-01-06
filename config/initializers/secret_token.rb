@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Phonebook::Application.config.secret_token = 'a652dde5a5516974311c653479d159275f89f0e5fa5dd64b9d3d2b3529d5bca2f7990acaf373bf497c89f46d52ce4b29fcd1d634b89e49e4a62dd2bee7fb1cc1'
+Phonebook::Application.config.secret_token = '22be4daf3f06ded1a4215b05a6e822230d2b3124da1bd93c4d1a44f0c2cb7a30408a974ace75289032e52d0185644f6b5b828423e26265588e38e96d214f357a'
