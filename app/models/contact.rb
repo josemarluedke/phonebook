@@ -1,7 +1,13 @@
 class Contact < ActiveRecord::Base
     belongs_to :group
     belongs_to :user
-    validates_presence_of :name, :phone, :group_id, :user_id
+    validates_presence_of :name, :phone, :group, :user
+    validates_associated :user, :group
+    attr_accessor :im_types
+    
+    after_initialize do
+        @im_types = ['AIM', 'Facebook', 'Gadu-Gadu', 'Google Talk', 'ICQ', 'Jabber', 'MSN', 'QQ', 'Skype', 'Yahoo']
+    end
 
     def self.my_contacts(current_user, options = {})
         where = nil

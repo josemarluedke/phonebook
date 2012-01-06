@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111125144208) do
+ActiveRecord::Schema.define(:version => 20120106151502) do
 
   create_table "authentications", :force => true do |t|
     t.integer  "user_id"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(:version => 20111125144208) do
     t.integer  "country_id"
     t.boolean  "favorite"
     t.string   "img_url"
+    t.string   "country"
   end
 
   create_table "groups", :force => true do |t|

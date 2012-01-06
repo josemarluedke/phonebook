@@ -1,6 +1,5 @@
 class Group < ActiveRecord::Base
-	validates_presence_of :name
-
+	validates :name, :presence => true
 	belongs_to :user
 
 	def self.my_groups(current_user)

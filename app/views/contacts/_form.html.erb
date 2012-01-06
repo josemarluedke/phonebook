@@ -37,10 +37,22 @@
         <%= f.label :name %><br />
         <%= f.text_field :name, :class => 'wFull' %>
     </div>
-    <div class="contact email">
+    <div class="contact email mr5px">
         <div class="field">
             <%= f.label :email, "E-mail" %><br />
             <%= f.email_field :email, :class => 'wFull' %>
+        </div>
+    </div>
+    <div class="w250px left mr5px">
+        <div class="field">
+            <%= f.label :im, "Instant Message" %><br />
+            <%= f.text_field :im, {:class => "w250px"}  %>
+        </div>
+    </div>
+    <div class="w100px left mr5px">
+        <div class="field">
+            <%= f.label :im_type, "IM Type" %><br />
+            <%= f.select :im_type, @contact.im_types, {}, {:class => "w100px"}  %>
         </div>
     </div>
     <div class="w200px left">
@@ -73,6 +85,31 @@
       <div class="field">
         <%= f.label :group_id %><br />
         <%= f.collection_select :group_id, Group.my_groups(current_user), :id, :name, {}, {:class => "w360px"}%>
+      </div>
+  </div>
+  <div class="clear"></div>
+  <div class="w500px left mr5px">
+      <div class="field">
+        <%= f.label :street %><br />
+        <%= f.text_field :street, {:class => "w500px"} %>
+      </div>
+  </div>
+  <div class="w200px left mr5px">
+      <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city, {:class => "w200px"} %>
+      </div>
+  </div>
+  <div class="w100px left mr5px">
+      <div class="field">
+        <%= f.label :zip_code %><br />
+        <%= f.text_field :zip_code, {:class => "w100px"} %>
+      </div>
+  </div>
+  <div class="w150px left">
+      <div class="field">
+        <%= f.label :country %><br />
+        <%= f.text_field :country, {:class => "w150px"} %>
       </div>
   </div>
   <div class="clear"></div>

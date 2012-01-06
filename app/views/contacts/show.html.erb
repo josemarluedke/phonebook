@@ -33,17 +33,38 @@
 </p>
 <br />
 <p>
-  <b>Birthday:</b>
-  <%= @contact.birthday.strftime "%d %B" unless @contact.birthday.nil? %>
-</p>
-
-<p>
   <b>Group:</b>
   <%= (@contact.group) ? @contact.group.name : nbsp %>
 </p>
 <p>
+  <b>Birthday:</b>
+  <%= @contact.birthday.strftime "%d %B" unless @contact.birthday.nil? %>
+</p>
+<% unless @contact.im.to_s.empty? %>
+    <p>
+        <b><%= @contact.im_type %>:</b>
+        <%= @contact.im %>
+    </p>
+<% end %>
+<p>
+  <b>Street:</b>
+  <%= @contact.street %>
+</p>
+<p>
+  <b>City:</b>
+  <%= @contact.city %>
+</p>
+<p>
+  <b>Zip Code:</b>
+  <%= @contact.zip_code %>
+</p>
+<p>
+  <b>Country:</b>
+  <%= @contact.country %>
+</p>
+<p>
   <b>Obs:</b>
-  <%= @contact.obs %>
+  <%= @contact.obs.to_s.gsub(/\n/, '<br />').html_safe %>
 </p>
 <p>
   <b>Created at:</b>
