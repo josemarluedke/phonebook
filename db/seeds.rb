@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+groups = ["Work", "Friends", "Family", "Known"]
+4.times do |i|
+    Group.create :name => groups[i-1]
+end
