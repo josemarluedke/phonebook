@@ -77,7 +77,7 @@ App.contacts = {
                             alert("Was not found specified twitter user");
                         }else{
                             $('input#contact_img_url').val(obj.img_url)
-                            $('div.contact.photo .img_photo').html('<img src="'+obj.img_url+'" width="100"/>')
+                            $('div.contact.photo .img_photo').html('<img src="'+obj.img_url+'" width="100"/>');
                         }
                     },
                     error: function(e, a){
@@ -113,7 +113,7 @@ App.contacts = {
                             alert("Was not found image");
                         }else{
                             $('input#contact_img_url').val(obj.img_url)
-                            $('div.contact.photo .img_photo').html('<img src="'+obj.img_url+'" width="100"/>')
+                            $('div.contact.photo .img_photo').html('<img src="'+obj.img_url+'" width="100"/>');
                         }
                     },
                     error: function(e, a){
@@ -127,6 +127,12 @@ App.contacts = {
                     }
                 });
             }
+            return false;
+        });
+        
+        $('div.contact.photo .photo_options a.remove').click(function(){
+            $('input#contact_img_url').val(''),
+            $('div.contact.photo .img_photo').html('<img src="'+$(this).attr('href')+'" width="100"/>');
             return false;
         });
         

@@ -124,13 +124,13 @@ header#menu li.userDetails:hover    {background: none;}
 
 /* Contact Form */
 div.field, div.actions                          {margin-bottom: 10px;}
-div.contact.photo                               {float: left; width: 100px; margin-right: 10px; margin-bottom: 10px; height: 90px; position: relative; border: 1px solid #DDD; border-radius: 5px; -webkit-border-radius: 5px;}
+div.contact.photo                               {float: left; width: 100px; margin-right: 10px; margin-bottom: 10px; height: 100px; position: relative;}
 div.contact.photo .photo_edit                   {position: absolute; top: 5px; right: 5px; display: none; background: #FFF; padding: 5px; border-radius: 3px; -webkit-border-radius: 3px; border: 1px solid #DDD; padding-top: 3px;}
 div.contact.photo:hover .photo_edit             {display: block;}
 div.contact.photo .photo_edit a.edit i          {background: url(icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 div.contact.photo .photo_edit.clicked           {background: #8397BF;}
 div.contact.photo .photo_edit.clicked a         {color: #FFF;}
-div.contact.photo .img_photo                    {width: 100px; height: 90px; overflow: hidden;}
+div.contact.photo .img_photo                    {width: 100px; height: 100px; overflow: hidden; border-radius: 5px; -webkit-border-radius: 5px; border: 1px solid #DDD;}
 div.contact.photo .photo_options                {position: absolute; top: 22px; left: -1px; width: 100px; background: #FFF; border: 1px solid #DDD; border-top: none; font-weight: bold; display: none;}
 div.contact.photo .photo_options ul             {margin: 0; padding: 0; list-style: none;}
 div.contact.photo .photo_options ul li          {padding: 10px;}
@@ -167,9 +167,12 @@ div.contact.email                               {margin-right: 5px; float: left;
 #contacts #list .item .content .details .more span.back         {background-position: -32px 0;}
 #contacts #list .item .content .actions                         {width: 450px; padding-top: 2px; margin: 0;}
 #contacts #list .item .content .actions a.favorite i, 
+span.favorite,
 div.favoriteFilter                                              {background: url(icons/favorite.png); width: 16px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
+span.favorite                                                   {margin-bottom: -2px; margin-right: 0px;}
 #contacts #list .item .content .actions a.favorite:hover i      {background-position: -16px 0; }
-#contacts #list .item .content .actions a.favorite.favorited i  {background-position: -32px 0; }
+#contacts #list .item .content .actions a.favorite.favorited i,
+span.favorite                                                   {background-position: -32px 0; }
 #contacts #list .item .content .actions a.edit i,
 .actions a.edit i                                               {background: url(icons/edit_other.png); width: 15px; height: 16px; display: inline-block; vertical-align: baseline; margin-bottom: -3px; margin-right: 3px;}
 #contacts #list .item .content .actions a.edit:hover i,

@@ -1,7 +1,7 @@
 <div class="contact photo">
     <div class="img_photo">
         <%=
-        if @contact.img_url.nil?
+        if @contact.img_url.to_s.empty?
             image_tag "silhouette.gif", :width => 100
         else
             image_tag @contact.img_url, :width => 100
@@ -9,14 +9,27 @@
         %>
     </div>
 </div>
-<h1><%= @contact.name %></h1>
-<h3><%= @contact.email %></h3>
+<h1 style="margin-top: 0;">
+    <%
+    if @contact.favorite
+    %>
+        <span class="favorite"></span>
+    <% 
+    end
+    %>
+    <%= @contact.name %>
+</h1>
+<h3><%= (@contact.email.to_s.empty?) ? "--" : (link_to @contact.email, "mailto:#{@contact.email}", :data => "no_ajax") %></h3>
 <p>
   <b>Phone:</b>
   <%= @contact.phone %>
   &nbsp;
-  <b>Cell:</b>
+  <b>Celll Phone:</b>
   <%= @contact.cell %>
+</p>
+<p>
+    <b>Twitter:</b>
+    <%= link_to @contact.twitter, "http://twitter.com/#{@contact.twitter[1..@contact.twitter.length]}", :data => "no_ajax" if @contact.twitter %>
 </p>
 <br />
 <p>
