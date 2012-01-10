@@ -1,4 +1,4 @@
-body            {color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0F0 url(bg.png) top repeat-x; margin:auto; padding:0px; width: 1000px;}
+body            {color:#444444; font:11px Arial, Helvetica, sans-serif; background:#F0F0F0 url(bg.png) top repeat-x; margin:auto; padding:0px; width: 1000px; position: relative;}
 
 /* Clear and Defaults */
 section,
@@ -88,6 +88,7 @@ input.inputCheckbox {width: 13px; height: 13px}
 .boxNotice          {margin-top: 10px; width: 760px; float: right;}
 .btnNew             {margin-top: 10px; text-align: right; margin-bottom: 5px; clear: both;}
 section.content     {margin-top: 10px; background: #FFF; border-radius: 6px; -webkit-border-radius: 6px; min-height: 400px; padding: 10px; padding-bottom: 20px; border: #D5D3F0 solid 1px;}
+footer p            {padding-top: 5px; text-align: center; color: #333;}
 
 /* Groups List */
 div.list                        {}
@@ -155,7 +156,7 @@ div.contact.email                               {margin-right: 5px; float: left;
 #contacts #details .content                         {padding: 5px;}
 #contacts #list .item                               {min-height: 50px; padding: 10px; padding-bottom: 5px; cursor: pointer;}
 #contacts #list .item .photo                        {float: left; width: 48px; min-height: 48px; margin-right: 5px; margin-top: 5px;}
-#contacts #list .item .photo img                    {border-radius:3px 2px 3px 3px; -webkit-border-radius:3px 3px 3px 3px;}
+#contacts #list .item .photo img                    {border-radius:3px; -webkit-border-radius:3px;}
 #contacts #list .item .content                      {width: 450px; padding: 0px;}
 #contacts #list .item .content .name                {font-weight: bold; font-size: 15px;}
 #contacts #list .item .content .group               {color: #999;}
@@ -196,6 +197,34 @@ div.favoriteFilter                  {margin: 0; background-position: -17px 0; wi
 div.favoriteFilter:hover            {background-position: -32px 0;}
 
 /* Loading Area */
-.loading-area           {position: fixed; display: none;}
-.loading-area-container {position:absolute; z-index:10000; top:0; left:375px; width: 250px; font-size:12px; color:#FFFFFF; text-align:center;}
-.loading-area-text      {font-weight:bold; padding:8px; padding-bottom: 3px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px; background:#444444;}
+.loading-area                       {position: fixed; display: none;}
+.loading-area-container             {position:absolute; z-index:10000; top:0; left:375px; width: 250px; font-size:12px; color:#FFFFFF; text-align:center;}
+.loading-area-text                  {font-weight:bold; padding:8px; padding-bottom: 3px; border-radius:0 0 6px 6px; -webkit-border-radius:0 0 6px 6px; background:#444444;}
+
+/* Social Sign In */
+.social_sign_in_home                {width: 310px; position: absolute; top: 40px; right: 0px;}
+a.sing_in_facebook                  {background: url(signin_facebook.png); width: 150px; height: 23px; display: block;}
+a.sing_in_facebook span             {visibility: hidden;}
+a.sing_in_facebook:hover            {background-position: 0 46px;}
+a.sing_in_facebook:active           {background-position: 0 22px;}
+a.sing_in_twitter                   {background: url(signin_twitter.png); width: 150px; height: 23px; display: block;}
+a.sing_in_twitter span              {visibility: hidden;}
+a.sing_in_twitter:hover             {background-position: 0 46px;}
+a.sing_in_twitter:active            {background-position: 0 22px;}
+
+/* Home */
+
+section.content section                                     {float: left; width: 480px; margin-right: 5px; font-size: 14px; line-height: 23px;}
+section.content section.wFull                               {float: none; width: 100%;}
+section.content section h1                                  {font-size:25px; color:#1E769C; text-shadow: 0 1px 2px #999; font-family:'DroidSansRegular',"Trebuchet MS",Trebuchet,Verdana,sans-serif; border-bottom: 1px solid #F8F8F8; padding-bottom: 5px; }
+section.content section.contact                             {line-height: normal; padding-top: 30px;}
+section.content section.contact div                         {font-size: 45px; font-weight: bold; text-shadow: 0 1px 2px #999; font-family:'DroidSansRegular',"Trebuchet MS",Trebuchet,Verdana,sans-serif; text-align: center;}
+section.content section.contact div a                       {padding-left: 25px; color: #1E769C; font-style: italic;}
+section.content section.contact div.header                  {visibility: visible; border-bottom: 1px solid #F8F8F8; }
+section.content section.screenshots .shelf                  {width: 880px; height: 215px; margin: auto; background: url(shelf.png) bottom left no-repeat; clear: both;}
+section.content section.screenshots .shelf .project         {border: 1px solid #B8B8B8; width: 210px;margin: 0 40px; height: 145px; background: #FFF; float: left; border-radius: 7px 4px 4px 4px; -moz-border-radius: 7px 4px 4px 4px; -webkit-border-radius: 7px 4px 4px 4px; box-shadow: 0px 1px 2px rgba(0,0,0,0.2); -moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.2); -webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.2); border-image: initial; text-align: center; padding-top: 5px;}
+section.content section.screenshots .shelf .project img     {border-radius: 4px; -webkit-border-radius: 4px;}
+section.content section.screenshots .shelf .project a span  {font-size: 12px;}
+section.content section.features ul                         {list-style: none; margin: 0; padding: 0;}
+section.content section.features ul li h3                   {color: #4BC808; margin: 0;}
+section.content section.features ul li p                    {padding-left: 10px; margin: 5px; margin-bottom: 10px; color: #999; font-size: 12px;}

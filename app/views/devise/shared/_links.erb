@@ -17,9 +17,12 @@
 <%- if devise_mapping.lockable? && resource_class.unlock_strategy_enabled?(:email) && controller_name != 'unlocks' %>
   <%= link_to "Didn't receive unlock instructions?", new_unlock_path(resource_name) %><br />
 <% end -%>
+<br />
 
-<%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <%= link_to "Sign in with #{provider.to_s.titleize}", omniauth_authorize_path(resource_name, provider) %><br />
-  <% end -%>
-<% end -%>
+<%= render "common/social_sign_in" %>
+
+<%# if devise_mapping.omniauthable? %>
+    <%# resource_class.omniauth_providers.each do |provider| %>
+        <%# <div class="left mr5px"><%= link_to raw("<span>Sign in with #{h provider.to_s.titleize}</span>"), omniauth_authorize_path(resource_name, provider), :class => "sing_in_#{provider}"</div>
+     end -%>
+<%# end -%>

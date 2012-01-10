@@ -1,34 +1,67 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="title">Edit <%= resource_name.to_s.humanize %></div>
+<div class="left w500px" style="border-right: 1px solid #CCC;">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+        <%= devise_error_messages! %>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
-  <%= devise_error_messages! %>
+        <p><%= f.label :name %><br />
+        <%= f.text_field :name %></p>
 
-  <p><%= f.label :name %><br />
-  <%= f.text_field :name %></p>
+        <p><%= f.label :email %><br />
+        <%= f.email_field :email %></p>
 
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
+        <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+        <%= f.password_field :password %></p>
 
-  <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password %></p>
+        <p><%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></p>
+        <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+        <%= f.password_field :current_password %></p>
 
-  <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></p>
+        <p><%= f.submit "Update" %></p>
+    <% end %>
+</div>
+<div class="left w400px" style="margin-left: 10px">
+    <h2>Authentiocations</h2>
+    <% 
+    authentiocations = {"facebook" => false, "twitter" => false}
+    if @authentiocations
+    %>
+        <div class="list w300px">
+          <div class="header">
+            <div class="left w300px">Name</div>
+            <div class="clear"></div>
+          </div>
+        
+        <%
+        @authentiocations.each do |authentiocation|
+        authentiocations[authentiocation.provider] = true
+        %>
+          <div class="item" onmouseover="App.roll_over(this);" onmouseout="App.roll_out(this);">
+            <div class="content" style="width: 300px;">
+              <div class="left w300px"><%= authentiocation.provider.to_s.humanize %></div>
+            </div>
+            <div class="clear"></div>
+          </div>
+          <% end %>
+        </div>
+    <% end %>
+    <br />
+    <% unless authentiocations["facebook"] %>
+        <div class="left mr5px">
+            <%= link_to raw("<span>Sign in with Facebook</span>"), user_omniauth_authorize_path(:facebook), :class => "sing_in_facebook" %>
+        </div>
+    <% end %>
+    <% unless authentiocations["twitter"] %>
+        <div class="left mr5px">
+            <%= link_to raw("<span>Sign in with Twitter"), user_omniauth_authorize_path(:twitter), :class => "sing_in_twitter" %>
+        </div>
+    <% end %>
+    <div class="clear"></div>
+</div>
 
-  <p><%= f.submit "Update" %></p>
-<% end %>
-
-<h3>Cancel my account</h3>
+<h3 class="clear">Cancel my account</h3>
 
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
 
 <%= link_to "Back", :back %>
-
-<br />
-
-<br />
-
-<%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>

@@ -1,1 +1,92 @@
-<h1 class="center">Welcome to phonebook!</h1>
+<section>
+    <a name="what_is"></a>
+    <h1>What is?</h1>
+    <%= image_tag "browsers.png", :class => 'right ml5px' %>
+    <p>
+        Phonebook is an address/phone book, and can create their contacts with several details thereof.
+        The operation of it is totally online. Only thing you need is a browser and an Internet connection.
+        <br /><br />
+        The system is totally <b>free</b>, not having any monthly fee.
+    </p>
+
+</section>
+
+<section class="features">
+    <a name="features"></a>
+    <h1>Features</h1>
+    <%
+    features = [
+                {:title => "Contact’s registration", :text => 'You can register your contacts with several information.'},
+                {:title => "Groups’s registration", :text => 'You can register your group of friends to help distinguish them predefined groups. The system comes with some predefined groups, disregarding the need for registration of a group.'},
+                {:title => "Contacts’ Avatar", :text => 'You can take the avatar of your contact from twitter and Gravatar service,
+                without having to upload it.'}
+                ]
+    %>
+    <ul>
+        <% features.each do |feature| %>
+        <li>
+            <h3><%= image_tag "icons/yes.png" %> <%=feature[:title] %></h3>
+            <p><%=feature[:text] %></p>
+        </li>
+        <% end %>
+    </ul>
+    
+    
+</section>
+
+<section class="clear wFull screenshots">
+    <a name="screenshots"></a>
+    <h1>Screenshots</h1>
+    <div class="shelf" id="firstRow">
+        <div class="project">
+            <a target="_blank" href="<%= asset_path 'screenshots/screen-1-big.jpg' %>">
+                <%= image_tag "screenshots/screen-1.jpg" %>
+                <span>Contact List</span>
+            </a>
+        </div>
+        <div class="project">
+            <a target="_blank" href="<%= asset_path 'screenshots/screen-2-big.jpg' %>">
+                <%= image_tag "screenshots/screen-2.jpg" %>
+                <span>Editing Contact</span>
+            </a>
+        </div>
+        <div class="project">
+            <a target="_blank" href="<%= asset_path 'screenshots/screen-3-big.jpg' %>">
+                <%= image_tag "screenshots/screen-3.jpg" %>
+                <span>Profile Settings</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="clear">
+    <a name="open-source"></a>
+    <h1>Open-Source</h1>
+    <a href="https://github.com/josemarluedke/phonebook"><%= image_tag "github-logo.png", :class => 'right ml5px' %></a>
+    <p>
+        This is an open-source project. Fully open for you, to see how it works and contribute to it.
+        <br />
+        It is available on <a href="https://github.com/josemarluedke/phonebook">Github</a> and you can give a Fork project and make their own changes.
+        <br /><br />
+        Distributed under the MIT license.
+    </p>
+</section>
+
+<section>
+    <a name="technologies"></a>
+    <h1>Technologies</h1>
+    <div class="right ml5px">
+        <a href="http://www.ruby-lang.org"><%= image_tag "ruby-logo.png", :class => 'mr5px' %></a>
+        <a href="http://www.rubyonrails.org"><%= image_tag "rails-logo.png", :class => 'mr5px' %></a>
+        <a href="http://www.postgresql.org"><%= image_tag "postgresql-logo.png", :class => 'mr5px' %></a>
+    </div>
+    <p>
+        The technologies used to develop the project were the best in the business of developing software for the web.
+    </p>
+</section>
+
+<section class="clear wFull contact">
+    <a name="contact"></a>
+    <div class="header"></div>
+    <div>Want to talk with us? <a href="mailto:phonebook@jdl.cc">phonebook@jdl.cc</a></div>
+</section>

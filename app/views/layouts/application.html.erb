@@ -22,20 +22,23 @@
 	</div>
 	<div id="logo"><%= link_to image_tag("logo.png"), "/" %><h1>Phonebook</h1></div>
 	<header id="menu">
-		<nav class="left" style="width:400px">
+		<nav class="left" style="width: <%= (user_signed_in?) ? "200px" : "510px" %>">
 			<ul>
-				<li>
-					<%= link_to "Home", '/' %>
-				</li>
-				<li>
-					<%= link_to "My Contacts", '/contacts' %>
-				</li>
-				<li>
-					<%= link_to "Groups", '/groups' %>
-				</li>
+				<li><%= link_to "Home", '/' %></li>
+				<% if user_signed_in? %>
+				    <li><%= link_to "My Contacts", '/contacts' %></li>
+    				<li><%= link_to "Groups", '/groups' %></li>
+				<% else %>
+				    <li><%= link_to "What is?", '#what_is' %></li>
+				    <li><%= link_to "Features", '#features' %></li>
+				    <li><%= link_to "Screenshots", '#screenshots' %></li>
+				    <li><%= link_to "Open-Source", '#open-source' %></li>
+				    <li><%= link_to "Technologies", '#technologies' %></li>
+				    <li><%= link_to "Contact", '#contact' %></li>
+				<% end %>
 			</ul>
 		</nav>
-		<div class="right" style="width:350px;">
+		<div class="right" style="width: <%= (user_signed_in?) ? "550px" : "250px" %>;">
 			<ul class="right">
 				<% if user_signed_in? %>
 					<li><a style="cursor:default;"><%= current_user.name %></a>
@@ -59,38 +62,43 @@
 						<%= link_to("Sign In", new_user_session_path) %>
 					</li>
 				<% end %>
-
 				<li style="margin-right:0px;">
 					<%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %>
 					<%= link_to("Sign up", new_user_registration_path) unless user_signed_in? %>
 				</li>
-				
 			</ul>
 		</div>
 	</header>
-
 	<% if notice %>
 		<div class="boxNotice">
 			<div id="notice"><%= notice %></div>
 			<script type="text/javascript">
 				$(document).ready(function(){
+				    <% unless user_signed_in? %>
+				        $('.social_sign_in_home').hide();
+				        setTimeout("$('.social_sign_in_home').show('fast')", 5000);
+				    <% end %>
 					setTimeout("$('#notice').slideUp('fast')", 5000);
 				});
 			</script>
 		</div>
 	<% end %>
+	
+	<% unless user_signed_in? %>
+    	<div class="social_sign_in_home">
+    	    <%= render "common/social_sign_in" %>
+    	</div>
+	<% end %>
 	<div class="clear"></div>
-
 	<section class="content">
 		<div id="content">
 			<%= yield %>
+			<div class="clear"></div>
 		</div>
 	</section>
 	<footer>
-		<p style="padding-top: 5px; text-align: center; color: #333">
-			<%= Time.now.year %> Copyright &copy; Phonebook with Ruby on Rails
-			<br />
-			Powered by <%= link_to "Josemar Davi Luedke", "http://josemarluedke.com" %>
+		<p>
+			<%= Time.now.year %> Copyright &copy; Phonebook - Powered by <%= link_to "Josemar Davi Luedke", "http://josemarluedke.com" %>
 		</p>
 	</footer>
 </body>
