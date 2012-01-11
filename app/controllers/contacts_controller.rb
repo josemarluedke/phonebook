@@ -84,7 +84,6 @@ class ContactsController < ApplicationController
 
     def create
         @contact = Contact.new(params[:contact])
-        return render_404 unless @contact
 
         respond_to do |format|
             if @contact.save
@@ -99,7 +98,6 @@ class ContactsController < ApplicationController
 
     def update
         @contact = Contact.find_by_id_and_user_id(params[:id], current_user.id)
-        return render_404 unless @contact
 
         respond_to do |format|
             if @contact.update_attributes(params[:contact])
