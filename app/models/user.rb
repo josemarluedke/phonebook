@@ -24,7 +24,7 @@ class User < ActiveRecord::Base
     def self.new_with_session(params, session)
         super.tap do |user|
             if data = session[:omniauth] && session[:omniauth]["user_info"]
-                user.email = data["email"]
+                user.email = data["email"] unless data["email"].to_s.empty?
                 user.name = data["name"]
                 user.authentications.build(:provider => session[:omniauth]['provider'], :uid => session[:omniauth]['uid'])
             end

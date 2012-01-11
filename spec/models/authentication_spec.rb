@@ -22,11 +22,6 @@ describe Authentication do
     end
     
     describe "associations" do
-        it "should be error when user does not exist" do
-            @authentication.user_id = 01122
-            @authentication.should_not be_valid
-        end
-        
         it "should be valid user" do
             @authentication.user_id = User.first.id
             @authentication.should be_valid
