@@ -94,7 +94,6 @@ App.contacts = {
             return false;
         });
         
-        
         $('div.contact.photo .photo_options a.from_gravatar').click(function(){
             if(!$('input#contact_email').val()){
                 alert('Please enter a email.');
@@ -129,7 +128,6 @@ App.contacts = {
             }
             return false;
         });
-        
         $('div.contact.photo .photo_options a.remove').click(function(){
             $('input#contact_img_url').val(''),
             $('div.contact.photo .img_photo').html('<img src="'+$(this).attr('href')+'" width="100"/>');
@@ -143,5 +141,4 @@ App.contacts = {
     edit: function(){
         App.contacts._form();
     }
-    
 }

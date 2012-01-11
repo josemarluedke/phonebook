@@ -1,105 +1,104 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="<%= I18n.locale %>">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title><%= "#{@page_title} - " if @page_title %>Phonebook</title>
-	<%= dispatcher_tag %>
-	<!--[if lt IE 9]>
-		<%= javascript_include_tag "ie/html5" %>
-	<![endif]-->
-	<%= stylesheet_link_tag "application" %>
-	<%= javascript_include_tag "application" %>
-	<%= csrf_meta_tag %>
-	<%= yield :javascript_block %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title><%= "#{@page_title} - " if @page_title %>Phonebook</title>
+    <%= dispatcher_tag %>
+    <!--[if lt IE 9]>
+        <%= javascript_include_tag "ie/html5" %>
+    <![endif]-->
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tag %>
+    <%= yield :javascript_block %>
 </head>
 <body>
-	<div class="loading-area">
-		<div class="loading-area-container">
-			<span class="loading-area-text">
-				 Loading...
-			</span>
-		</div>
-	</div>
-	<div id="logo"><%= link_to image_tag("logo.png"), "/" %><h1>Phonebook</h1></div>
-	<header id="menu">
-		<nav class="left" style="width: <%= (user_signed_in?) ? "200px" : "510px" %>">
-			<ul>
-				<li><%= link_to "Home", '/' %></li>
-				<% if user_signed_in? %>
-				    <li><%= link_to "My Contacts", '/contacts' %></li>
-    				<li><%= link_to "Groups", '/groups' %></li>
-				<% else %>
-				    <li><%= link_to "What is?", '#what_is' %></li>
-				    <li><%= link_to "Features", '#features' %></li>
-				    <li><%= link_to "Screenshots", '#screenshots' %></li>
-				    <li><%= link_to "Open-Source", '#open-source' %></li>
-				    <li><%= link_to "Technologies", '#technologies' %></li>
-				    <li><%= link_to "Contact", '#contact' %></li>
-				<% end %>
-			</ul>
-		</nav>
-		<div class="right" style="width: <%= (user_signed_in?) ? "550px" : "250px" %>;">
-			<ul class="right">
-				<% if user_signed_in? %>
-					<li><a style="cursor:default;"><%= current_user.name %></a>
-						<ul class="first">
-							<li class="userDetails">
-								<b><%= current_user.name %></b>
-								<br />
-								<%= current_user.email %>
-								<br /><br />
-								<b>Last sign in at</b> 
-								<br />
-								<%= current_user.last_sign_in_at %>
-							</li>
-							<li>
-								<%= link_to "Profile settings", edit_user_registration_path(current_user) %>
-							</li>
-						</ul>
-					</li>
-				<% else %>
-					<li style="margin-right:0px;">
-						<%= link_to("Sign In", new_user_session_path) %>
-					</li>
-				<% end %>
-				<li style="margin-right:0px;">
-					<%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %>
-					<%= link_to("Sign up", new_user_registration_path) unless user_signed_in? %>
-				</li>
-			</ul>
-		</div>
-	</header>
-	<% if notice %>
-		<div class="boxNotice">
-			<div id="notice"><%= notice %></div>
-			<script type="text/javascript">
-				$(document).ready(function(){
-				    <% unless user_signed_in? %>
-				        $('.social_sign_in_home').hide();
-				        setTimeout("$('.social_sign_in_home').show('fast')", 5000);
-				    <% end %>
-					setTimeout("$('#notice').slideUp('fast')", 5000);
-				});
-			</script>
-		</div>
-	<% end %>
-	
-	<% unless user_signed_in? %>
-    	<div class="social_sign_in_home">
-    	    <%= render "common/social_sign_in" %>
-    	</div>
-	<% end %>
-	<div class="clear"></div>
-	<section class="content">
-		<div id="content">
-			<%= yield %>
-			<div class="clear"></div>
-		</div>
-	</section>
-	<footer>
-		<p>
-			<%= Time.now.year %> Copyright &copy; Phonebook - Powered by <%= link_to "Josemar Davi Luedke", "http://josemarluedke.com" %>
-		</p>
-	</footer>
+    <div class="loading-area">
+        <div class="loading-area-container">
+            <span class="loading-area-text">
+                 Loading...
+            </span>
+        </div>
+    </div>
+    <div id="logo"><%= link_to image_tag("logo.png"), "/" %><h1>Phonebook</h1></div>
+    <header id="menu">
+        <nav class="left" style="width: <%= (user_signed_in?) ? "200px" : "510px" %>">
+            <ul>
+                <li><%= link_to "Home", '/' %></li>
+                <% if user_signed_in? %>
+                    <li><%= link_to "My Contacts", '/contacts' %></li>
+                    <li><%= link_to "Groups", '/groups' %></li>
+                <% else %>
+                    <li><%= link_to "What is?", '#what_is' %></li>
+                    <li><%= link_to "Features", '#features' %></li>
+                    <li><%= link_to "Screenshots", '#screenshots' %></li>
+                    <li><%= link_to "Open-Source", '#open-source' %></li>
+                    <li><%= link_to "Technologies", '#technologies' %></li>
+                    <li><%= link_to "Contact", '#contact' %></li>
+                <% end %>
+            </ul>
+        </nav>
+        <div class="right" style="width: <%= (user_signed_in?) ? "550px" : "250px" %>;">
+            <ul class="right">
+                <% if user_signed_in? %>
+                    <li><a style="cursor:default;"><%= current_user.name %></a>
+                        <ul class="first">
+                            <li class="userDetails">
+                                <b><%= current_user.name %></b>
+                                <br />
+                                <%= current_user.email %>
+                                <br /><br />
+                                <b>Last sign in at</b> 
+                                <br />
+                                <%= current_user.last_sign_in_at %>
+                            </li>
+                            <li>
+                                <%= link_to "Profile settings", edit_user_registration_path(current_user) %>
+                            </li>
+                        </ul>
+                    </li>
+                <% else %>
+                    <li style="margin-right:0px;">
+                        <%= link_to("Sign In", new_user_session_path) %>
+                    </li>
+                <% end %>
+                <li style="margin-right:0px;">
+                    <%= link_to("Sign Out", destroy_user_session_path, :method => :delete) if user_signed_in? %>
+                    <%= link_to("Sign up", new_user_registration_path) unless user_signed_in? %>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <% if notice %>
+        <div class="boxNotice">
+            <div id="notice"><%= notice %></div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    <% unless user_signed_in? %>
+                        $('.social_sign_in_home').hide();
+                        setTimeout("$('.social_sign_in_home').show('fast')", 5000);
+                    <% end %>
+                    setTimeout("$('#notice').slideUp('fast')", 5000);
+                });
+            </script>
+        </div>
+    <% end %>
+    <% unless user_signed_in? %>
+        <div class="social_sign_in_home">
+            <%= render "common/social_sign_in" %>
+        </div>
+    <% end %>
+    <div class="clear"></div>
+    <section class="content">
+        <div id="content">
+            <%= yield %>
+            <div class="clear"></div>
+        </div>
+    </section>
+    <footer>
+        <p>
+            <%= Time.now.year %> Copyright &copy; Phonebook - Powered by <%= link_to "Josemar Davi Luedke", "http://josemarluedke.com" %>
+        </p>
+    </footer>
 </body>
 </html>

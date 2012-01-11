@@ -21,11 +21,11 @@
 </h1>
 <h3><%= (@contact.email.to_s.empty?) ? "--" : (link_to @contact.email, "mailto:#{@contact.email}", :data => "no_ajax") %></h3>
 <p>
-  <b>Phone:</b>
-  <%= @contact.phone %>
-  &nbsp;
-  <b>Celll Phone:</b>
-  <%= @contact.cell %>
+    <b>Phone:</b>
+    <%= @contact.phone %>
+    &nbsp;
+    <b>Celll Phone:</b>
+    <%= @contact.cell %>
 </p>
 <p>
     <b>Twitter:</b>
@@ -33,12 +33,12 @@
 </p>
 <br />
 <p>
-  <b>Group:</b>
-  <%= (@contact.group) ? @contact.group.name : nbsp %>
+    <b>Group:</b>
+    <%= (@contact.group) ? @contact.group.name : nbsp %>
 </p>
 <p>
-  <b>Birthday:</b>
-  <%= @contact.birthday.strftime "%d %B" unless @contact.birthday.nil? %>
+    <b>Birthday:</b>
+    <%= @contact.birthday.strftime "%d %B" unless @contact.birthday.nil? %>
 </p>
 <% unless @contact.im.to_s.empty? %>
     <p>
@@ -47,28 +47,28 @@
     </p>
 <% end %>
 <p>
-  <b>Street:</b>
-  <%= @contact.street %>
+    <b>Street:</b>
+    <%= @contact.street %>
 </p>
 <p>
-  <b>City:</b>
-  <%= @contact.city %>
+    <b>City:</b>
+    <%= @contact.city %>
 </p>
 <p>
-  <b>Zip Code:</b>
-  <%= @contact.zip_code %>
+    <b>Zip Code:</b>
+    <%= @contact.zip_code %>
 </p>
 <p>
-  <b>Country:</b>
-  <%= @contact.country %>
+    <b>Country:</b>
+    <%= @contact.country %>
 </p>
 <p>
-  <b>Obs:</b>
-  <%= @contact.obs.to_s.gsub(/\n/, '<br />').html_safe %>
+    <b>Obs:</b>
+    <%= @contact.obs.to_s.gsub(/\n/, '<br />').html_safe %>
 </p>
 <p>
-  <b>Created at:</b>
-  <%= @contact.created_at.strftime "%d/%m/%Y %H:%M:%S" %>
+    <b>Created at:</b>
+    <%= @contact.created_at.strftime "%d/%m/%Y %H:%M:%S" %>
 </p>
 
 <div class="actions">
