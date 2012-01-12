@@ -19,23 +19,23 @@
     </div>
     <div id="logo"><%= link_to image_tag("logo.png"), "/" %><h1>Phonebook</h1></div>
     <header id="menu">
-        <nav class="left" style="width: <%= (user_signed_in?) ? "200px" : "510px" %>">
+        <nav class="left" style="width: <%= (user_signed_in?) ? "200px" : "520px" %>">
             <ul>
                 <li><%= link_to "Home", '/' %></li>
                 <% if user_signed_in? %>
                     <li><%= link_to "My Contacts", '/contacts' %></li>
                     <li><%= link_to "Groups", '/groups' %></li>
                 <% else %>
-                    <li><%= link_to "What is?", '#what_is' %></li>
-                    <li><%= link_to "Features", '#features' %></li>
-                    <li><%= link_to "Screenshots", '#screenshots' %></li>
-                    <li><%= link_to "Open-Source", '#open-source' %></li>
-                    <li><%= link_to "Technologies", '#technologies' %></li>
-                    <li><%= link_to "Contact", '#contact' %></li>
+                    <li><%= link_to "What is?", '/#what_is' %></li>
+                    <li><%= link_to "Features", '/#features' %></li>
+                    <li><%= link_to "Screenshots", '/#screenshots' %></li>
+                    <li><%= link_to "Open-Source", '/#open-source' %></li>
+                    <li><%= link_to "Technologies", '/#technologies' %></li>
+                    <li><%= link_to "Contact", '/#contact' %></li>
                 <% end %>
             </ul>
         </nav>
-        <div class="right" style="width: <%= (user_signed_in?) ? "550px" : "250px" %>;">
+        <div class="right" style="width: <%= (user_signed_in?) ? "550px" : "240px" %>;">
             <ul class="right">
                 <% if user_signed_in? %>
                     <li><a style="cursor:default;"><%= current_user.name %></a>
