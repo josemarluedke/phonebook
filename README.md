@@ -17,9 +17,7 @@ Demo
 ----
 http://phonebook-jdl.herokuapp.com
 
+License
+-------
 
-
-Who?
-----
-
-By [Josemar Davi Luedke](http://josemarluedke.com)
+Copyright (C) 2011-2012 Josemar Davi Luedke josemarluedke@gmail.com released under the MIT license
