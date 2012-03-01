@@ -53,6 +53,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.2.0)
+    country-select (1.1.0)
     database_cleaner (0.7.0)
     devise (1.4.9)
       bcrypt-ruby (~> 3.0)
@@ -224,6 +225,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   coffee-rails (~> 3.1.1)
+  country-select
   database_cleaner
   devise (~> 1.4.2)
   factory_girl_rails

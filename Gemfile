@@ -32,3 +32,4 @@ group :test do
 end
 
 gem 'activeadmin'
+gem 'country-select'
